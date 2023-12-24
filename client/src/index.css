@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Poppins:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.companyName{
+    font-family: 'Metal Mania', cursive;
+}
+.companyH1{
+    font-family: 'Calligraffitti', cursive;
+}
+
+.headerList{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
