@@ -1,11 +1,91 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import vision from "./../assets/vision.png";
 import mission from "./../assets/mission.png";
 import director from "./../assets/director.png";
+import avatarBoy from "./../assets/avatarBoy.png";
+import avatarGirl from "./../assets/avatarGirl.png";
 
 export default function About() {
   const [showFullMessage, setShowFullMessage] = useState(false);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  
+  },[]);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    responsive:[
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2, 
+        },
+      },
+    ]
+  };
+
+  const teamData = [
+    {
+      name: `MR. L. B. NEIL LADDUSINGHE`,
+      designation: `MANAGING DIRECTOR`,
+      image: director,
+    },
+    {
+      name: `MRS. NADEE HETTIARACHCHI`,
+      designation: `BOARD OF DIRECTOR`,
+      image: avatarGirl,
+    },
+    {
+      name: `MR. WASANTHA PREMATHILAKA`,
+      designation: `BOARD OF DIRECTOR`,
+      image: avatarBoy,
+    },
+    {
+      name: `MR. A.G.TISSA PRIYANTHA`,
+      designation: `BOARD OF DIRECTOR`,
+      image: avatarBoy,
+    },
+    {
+      name: `MRS. R. RUWANI PERERA`,
+      designation: `FINANCE MANAGER`,
+      image: avatarGirl,
+    },
+    {
+      name: `BUSINESS EYE MANAGEMENT (PVT) LTD`,
+      designation: `COMPANY SECRETARY`,
+      image: avatarBoy,
+    },
+    {
+      name: `MR. K. KUMANAYAKE`,
+      designation: `RECRUITING MANAGER`,
+      image: avatarBoy,
+    },
+    {
+      name: `MR. SUNIL NISHANTHA`,
+      designation: `INTERNATIONAL COORDINATOR`,
+      image: avatarBoy,
+    },
+  ];
 
   const initialMessage = `I, L B Neil Laddusinghe is an accountant by profession, having
   nearly 17 years of experience in accountancy both in Sri Lanka and
@@ -51,12 +131,11 @@ export default function About() {
   overseas markets and we are very sure that we will succeed in our
   vision in time to come.`;
 
-  const fullMessage = initialMessage  + additionalMessage;
+  const fullMessage = initialMessage + additionalMessage;
 
   const toggleMessage = () => {
     setShowFullMessage(!showFullMessage);
   };
- 
 
   return (
     <div className="bg-white max-w-6xl  mx-auto w-full mb-10">
@@ -128,44 +207,81 @@ export default function About() {
             alt="director image"
           />
 
-<p className="text-justify directorMessage">
-  
-  {showFullMessage
-    ? fullMessage.split('\n\n').map((paragraph, index) => (
-        <React.Fragment key={index}>
-          {paragraph}
-          <br/>
-          
-        </React.Fragment>
-      ))
-    : initialMessage.split('\n\n').map((paragraph, index) => (
-        <React.Fragment key={index}>
-          {paragraph}
-          <br/><br/>
-        </React.Fragment>
-      ))
-  }
-  {showFullMessage && (
-    <span
-      className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
-      onClick={toggleMessage}
-    >
-      Show Less..
-    </span>
-  )}
-  {!showFullMessage && (
-    <span
-      className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
-      onClick={toggleMessage}
-    >
-    Read More..
-    </span>
-  )}
-</p>
-
+          <p className="text-justify roboto">
+            {showFullMessage
+              ? fullMessage.split("\n\n").map((paragraph, index) => (
+                  <React.Fragment key={index}>
+                    {paragraph}
+                    <br />
+                  </React.Fragment>
+                ))
+              : initialMessage.split("\n\n").map((paragraph, index) => (
+                  <React.Fragment key={index}>
+                    {paragraph}
+                    <br />
+                    <br />
+                  </React.Fragment>
+                ))}
+            {showFullMessage && (
+              <span
+                className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                onClick={toggleMessage}
+              >
+                Show Less..
+              </span>
+            )}
+            {!showFullMessage && (
+              <span
+                className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                onClick={toggleMessage}
+              >
+                Read More..
+              </span>
+            )}
+          </p>
         </div>
       </div>
 
+      {/* our team */}
+      <div className="max-w-4xl mx-auto poppins">
+        <div className="uppercase  flex justify-center agencyProfile text-3xl mt-20">
+          <h2 className="text-slate-950 font-bold">Our Team</h2>
+        </div>
+        {/* <div className="flex flex-col md:flex-row justify-center mt-10 items-center ">
+          <div className="flex flex-col items-center justify-center mx-3 ">
+            <img
+              src={director}
+              alt=""
+              className="w-40 h-40 rounded-full"
+            />
+            <h3 className="text-xl font-semibold mt-2">MANAGING DIRECTOR
+</h3>
+            <p className="text-sm font-light">MR. L. B. NEIL LADDUSINGHE</p>
+          </div>         
+        </div> */}
+        <div className="min-w-full pb-10 ">
+          <div className="w-3/4 m-auto">
+            <div className="mt-10 ">
+              <Slider {...settings}>
+                {teamData.map((d) => (
+                  <div className="bg-blue-100 h-[350px] text-black rounded-xl shadow-2xl ">
+                    <div className="h-56 rounded-xl flex justify-center items-center">
+                      <img src={d.image} className="h-44 w-44 rounded-full" />
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center text-center m-2">
+                      <h3 className="text-xl font-semibold ">
+                        {d.designation}
+                      </h3>
+                      <p className="text-sm font-light">{d.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

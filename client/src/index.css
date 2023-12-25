@@ -14,7 +14,7 @@
     font-family: 'Calligraffitti', cursive;
 }
 
-.headerList,.agencyProfile,.agencyProfileText,.vision{
+.headerList,.agencyProfile,.agencyProfileText,.vision,.poppins{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
@@ -24,7 +24,16 @@ body{
     ;
 }
 
-.directorMessage{
+.roboto{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+.slick-slide > div {
+    margin: 0px 5px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(96 165 250);
 }
