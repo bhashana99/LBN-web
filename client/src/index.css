@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Roboto&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,12 +14,17 @@
     font-family: 'Calligraffitti', cursive;
 }
 
-.headerList{
+.headerList,.agencyProfile,.agencyProfileText,.vision{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
 body{
-    background-color: #e7e5e4
+    background-color: rgb(255, 255, 255)
     ;
+}
+
+.directorMessage{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
