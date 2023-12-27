@@ -7,6 +7,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
 .companyName{
     font-family: 'Metal Mania', cursive;
 }
