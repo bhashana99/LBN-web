@@ -25,8 +25,7 @@ export default function About() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  
-  },[]);
+  }, []);
 
   var settings = {
     dots: true,
@@ -34,14 +33,14 @@ export default function About() {
     speed: 500,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
-    responsive:[
+    responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2, 
+          slidesToShow: 2,
         },
       },
-    ]
+    ],
   };
 
   const teamData = [
@@ -61,19 +60,9 @@ export default function About() {
       image: avatarBoy,
     },
     {
-      name: `MR. A.G.TISSA PRIYANTHA`,
-      designation: `BOARD OF DIRECTOR`,
-      image: avatarBoy,
-    },
-    {
       name: `MRS. R. RUWANI PERERA`,
       designation: `FINANCE MANAGER`,
       image: avatarGirl,
-    },
-    {
-      name: `BUSINESS EYE MANAGEMENT (PVT) LTD`,
-      designation: `COMPANY SECRETARY`,
-      image: avatarBoy,
     },
     {
       name: `MR. K. KUMANAYAKE`,
@@ -141,7 +130,7 @@ export default function About() {
     <div className="bg-white max-w-6xl  mx-auto w-full mb-10">
       {/* agency profile */}
       <div className="mt-10 md:mt-20 mx-3 md:mx-0">
-        <div className="uppercase  flex justify-center agencyProfile text-4xl">
+        <div className="uppercase  flex justify-center poppins text-4xl">
           <h1 className="font-semibold">
             <span className="text-red-700">Agency</span> Profile
           </h1>
@@ -162,7 +151,7 @@ export default function About() {
       {/* vision and mission */}
 
       <div className="mt-16 md:mt-24 grid grid-cols-1   md:grid-cols-2 gap-4 max-w-4xl mx-3 md:mx-auto vision ">
-        <div className="w-full py-[1rem] px-4 bg-amber-200 rounded-lg shadow-lg">
+        <div className="w-full py-[1rem] px-4 bg-amber-200 rounded-lg shadow-lg hover:scale-95">
           <img src={vision} alt="" className="w-20 mx-auto mt-[-3rem] " />
           <div>
             <h2 className="text-2xl font-bold text-center py-4 uppercase text-sky-950">
@@ -176,7 +165,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-full py-4 md:py-[1rem] px-4  bg-green-200 rounded-lg shadow-lg md:mt-0 mt-4 ">
+        <div className="w-full py-4 md:py-[1rem] px-4  bg-green-200 rounded-lg shadow-lg md:mt-0 mt-4 hover:scale-95 ">
           <img src={mission} alt="" className="w-20 mx-auto mt-[-3rem] " />
           <div>
             <h2 className="text-2xl font-bold text-center py-4 text-sky-950 uppercase">
@@ -195,7 +184,7 @@ export default function About() {
 
       {/* director message */}
       <div className="mt-20 mx-3 md:mx-auto ">
-        <div className="uppercase  flex justify-center agencyProfile text-3xl ">
+        <div className="uppercase  flex justify-center poppins text-3xl ">
           <h2 className="text-slate-950 font-bold  mb-10">
             DIRECTOR’S MESSAGE
           </h2>
@@ -247,33 +236,21 @@ export default function About() {
         <div className="uppercase  flex justify-center agencyProfile text-3xl mt-20">
           <h2 className="text-slate-950 font-bold">Our Team</h2>
         </div>
-        {/* <div className="flex flex-col md:flex-row justify-center mt-10 items-center ">
-          <div className="flex flex-col items-center justify-center mx-3 ">
-            <img
-              src={director}
-              alt=""
-              className="w-40 h-40 rounded-full"
-            />
-            <h3 className="text-xl font-semibold mt-2">MANAGING DIRECTOR
-</h3>
-            <p className="text-sm font-light">MR. L. B. NEIL LADDUSINGHE</p>
-          </div>         
-        </div> */}
-        <div className="min-w-full pb-10 ">
+        <div className=" pb-10 ">
           <div className="w-3/4 m-auto">
-            <div className="mt-10 ">
+            <div className="mt-10  ">
               <Slider {...settings}>
                 {teamData.map((d) => (
-                  <div className="bg-blue-100 h-[350px] text-black rounded-xl shadow-2xl ">
-                    <div className="h-56 rounded-xl flex justify-center items-center">
-                      <img src={d.image} className="h-44 w-44 rounded-full" />
-                    </div>
+                  <div className="bg-blue-100 h-[350px] rounded-xl shadow-2xl hover:scale-95 hover:shadow-none ">
+                    
 
-                    <div className="flex flex-col justify-center items-center text-center m-2">
-                      <h3 className="text-xl font-semibold ">
+                    <div className="flex flex-col justify-center items-center text-center ">
+                      <h3 className="text-xl font-semibold my-5 text-slate-900">
                         {d.designation}
                       </h3>
-                      <p className="text-sm font-light">{d.name}</p>
+                      <p className="text-semibold font-normal text-blue-900 ">
+                        {d.name}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -282,6 +259,10 @@ export default function About() {
           </div>
         </div>
       </div>
+
+    
+      
+  
     </div>
   );
 }

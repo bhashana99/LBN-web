@@ -36,4 +36,6 @@ body{
 .slick-prev:before,
 .slick-next:before {
   color: rgb(96 165 250);
+  font-size: 30px;
+  
 }
