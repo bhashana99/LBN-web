@@ -3,14 +3,15 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     extend: {
       colors: {
-        primary:"rgba(255,255,255,0.30)",
-        fontBlack: "#081323",
-        fontGray : "#828282",
-        overlay : "rgba(0,0,0,0.30)",
+       'neutralSilver':'#f5f7fa',
+       'neutralDGrey':'#4d4d4d',
+       'brandPrimary':'#4caf4f',
+       'neutralGrey':'#717171',
       },
       screens: {
         xs : "550px",
@@ -21,5 +22,7 @@ export default {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+  ],
 }

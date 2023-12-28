@@ -3,11 +3,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import vision from "./../assets/vision.png";
-import mission from "./../assets/mission.png";
-import director from "./../assets/director.png";
-import avatarBoy from "./../assets/avatarBoy.png";
-import avatarGirl from "./../assets/avatarGirl.png";
+import vision from "./../assets/images/vision.png";
+import mission from "./../assets/images/mission.png";
+import director from "./../assets/images/director.png";
+import avatarBoy from "./../assets/images/avatarBoy.png";
+import avatarGirl from "./../assets/images/avatarGirl.png";
 
 export default function About() {
   const [showFullMessage, setShowFullMessage] = useState(false);
@@ -241,7 +241,7 @@ export default function About() {
             <div className="mt-10  ">
               <Slider {...settings}>
                 {teamData.map((d) => (
-                  <div className="bg-blue-100 h-[350px] rounded-xl shadow-2xl hover:scale-95 hover:shadow-none ">
+                  <div className="bg-blue-100 h-[150px] px-5 rounded-xl shadow-2xl hover:scale-95 hover:shadow-none flex justify-center items-center ">
                     
 
                     <div className="flex flex-col justify-center items-center text-center ">

@@ -1,6 +1,6 @@
 import { Link,useLocation } from "react-router-dom";
 import { useState } from "react";
-import img1 from "./../assets/LBN.png";
+import logo from "./../assets/images/LBN.png";
 import {AiOutlineClose,AiOutlineMenu} from 'react-icons/ai'
 
 export default function Header() {
@@ -20,19 +20,19 @@ export default function Header() {
     setShowMenu(!showMenu)
   }
   return (
-    <header className="bg-none shadow-lg sticky top-0 z-20 ">
+    <header className=" bg-slate-200 shadow-2xl sticky top-0 z-20 ">
       <div className="flex justify-between items-center max-w-7xl mx-auto p-4">
         <Link to="/" className="z-20">
           <div className="  flex items-center gap-3">
             <div>
-              <img src={img1} alt="LBN LOGO" className="w-10 h-10" />
+              <img src={logo} alt="LBN LOGO" className="w-10 h-10" />
             </div>
             <div className="text-sm sm:text-xl font-bold">
               <h1 className="flex flex-col">
                 <span className="text-red-500 companyName ">
                   LBN KEY RESOURCE (PVT) LTD
                 </span>
-                <span className="companyH1 text-sm flex justify-end">
+                <span className="companyH1 text-sm flex justify-end text-black">
                   The Head Hunters
                 </span>
               </h1>
