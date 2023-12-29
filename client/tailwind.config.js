@@ -13,12 +13,7 @@ export default {
        'brandPrimary':'#4caf4f',
        'neutralGrey':'#717171',
       },
-      screens: {
-        xs : "550px",
-        md : "850px",
-        xl : "1180px",
-        "2xl" : "1280px"
-      },
+     
 
     },
   },
