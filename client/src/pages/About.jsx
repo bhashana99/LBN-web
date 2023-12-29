@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import Slider from "react-slick";
+import FadeIn from "./../components/FadeIn";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import vision from "./../assets/images/vision.png";
@@ -8,6 +9,7 @@ import mission from "./../assets/images/mission.png";
 import director from "./../assets/images/director.png";
 import avatarBoy from "./../assets/images/avatarBoy.png";
 import avatarGirl from "./../assets/images/avatarGirl.png";
+import logo from "./../assets/images/LBN.png";
 
 export default function About() {
   const [showFullMessage, setShowFullMessage] = useState(false);
@@ -128,25 +130,73 @@ export default function About() {
 
   return (
     <div className="bg-white max-w-6xl  mx-auto w-full mb-10">
-      {/* agency profile */}
+      <div className=" ">
+        {/* agency profile */}
       <div className="mt-10 md:mt-20 mx-3 md:mx-0">
         <div className="uppercase  flex justify-center poppins text-4xl">
-          <h1 className="font-semibold">
-            <span className="text-red-700">Agency</span> Profile
-          </h1>
+          <FadeIn delay={0.2} direction="down" padding fullWidth>
+            <h1 className="font-semibold">
+              <span className="text-red-700">Agency</span> Profile
+            </h1>
+          </FadeIn>
         </div>
-        <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
-          <p className="font-light">
-            <span className="font-semibold  text-slate-900">
-              LBN Key Resource (Pvt) Ltd
-            </span>{" "}
-            was established in 2006, with an experienced staff in the recruiting
-            field and has earned a prestigious name both in Sri Lanka and abroad
-            and absolutely clean, transparent and high professionalism in
-            manpower recruitment field.
-          </p>
+        <FadeIn delay={0.5} direction="middle" padding fullWidth>
+          <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
+            <p className="font-light">
+              <span className="font-semibold  text-slate-900">
+                LBN Key Resource (Pvt) Ltd
+              </span>{" "}
+              was established in 2006, with an experienced staff in the
+              recruiting field and has earned a prestigious name both in Sri
+              Lanka and abroad and absolutely clean, transparent and high
+              professionalism in manpower recruitment field.
+            </p>
+          </div>
+        </FadeIn>
+      </div>
+
+      {/* INTRODUCTION */}
+      <div className="mt-10 max-w-4xl mx-auto">
+        <div className="flex justify-center poppins">
+          <FadeIn delay={0.4} direction="middle" padding fullWidth>
+            <h1 className="uppercase  my-5 text-4xl font-semibold ">
+              INTRODUCTION
+            </h1>
+          </FadeIn>
+        </div>
+        <div className="grid grid-cols-3 gap-2 md:gap-4">
+          <div className="col-span-3 md:col-span-1">
+            <FadeIn delay={0.4} direction="right" padding fullWidth>
+              <img src={logo} alt="" className=" h-32 md:h-64" />
+            </FadeIn>
+          </div>
+
+          <div className="col-span-3 md:col-span-2">
+            <ul className="list-disc ">
+              <FadeIn delay={0.4} direction="left" padding fullWidth>
+                <li className="mb-3"><p><span className="font-semibold">LBN Key Resource (Pvt) Ltd</span> is an authorized employment agency,
+approved by the bureau of foreign employment of Sri Lanka to act as
+an agent for foreign principals in recruiting and supplying
+personnel for all categories of foreign employment.</p></li>
+              </FadeIn>
+              <FadeIn delay={0.5} direction="left" padding fullWidth>
+                <li><p><span className="font-semibold">LBN Key Resource (Pvt) Ltd</span> was established in 2006 by a team of
+young experienced staff with and initial investment of Rs.2 Million.
+It has gained recognition in Sri Lanka as a one of
+the market leaders in the field of foreign employment.</p></li>
+              </FadeIn>
+              <FadeIn delay={0.8} direction="left" padding fullWidth>
+                <li>The <span className="font-semibold">main business</span> of LBN Key Resource (Pvt) Ltd consists of
+supplying of professionals, technical, skilled and unskilled
+man power to foreign principals, ticketing and travel agent.
+</li>
+              </FadeIn>
+            </ul>
+          </div>
         </div>
       </div>
+      </div>
+      
 
       {/* vision and mission */}
 
@@ -183,55 +233,59 @@ export default function About() {
       </div>
 
       {/* director message */}
-      <div className="mt-20 mx-3 md:mx-auto ">
-        <div className="uppercase  flex justify-center poppins text-3xl ">
-          <h2 className="text-slate-950 font-bold  mb-10">
-            DIRECTOR’S MESSAGE
-          </h2>
-        </div>
-        <div className="w-full max-w-4xl mx-auto ">
-          <img
-            src={director}
-            className="max-h-48 md:max-h-80 float-left pr-5"
-            alt="director image"
-          />
+      <FadeIn delay={0.2} direction="middle" padding fullWidth>
+        <div className="mt-20 mx-3 md:mx-auto ">
+          <div className="uppercase  flex justify-center poppins text-3xl ">
+            <h2 className="text-slate-950 font-bold  mb-10">
+              DIRECTOR’S MESSAGE
+            </h2>
+          </div>
 
-          <p className="text-justify roboto">
-            {showFullMessage
-              ? fullMessage.split("\n\n").map((paragraph, index) => (
-                  <React.Fragment key={index}>
-                    {paragraph}
-                    <br />
-                  </React.Fragment>
-                ))
-              : initialMessage.split("\n\n").map((paragraph, index) => (
-                  <React.Fragment key={index}>
-                    {paragraph}
-                    <br />
-                    <br />
-                  </React.Fragment>
-                ))}
-            {showFullMessage && (
-              <span
-                className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
-                onClick={toggleMessage}
-              >
-                Show Less..
-              </span>
-            )}
-            {!showFullMessage && (
-              <span
-                className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
-                onClick={toggleMessage}
-              >
-                Read More..
-              </span>
-            )}
-          </p>
+          <div className="w-full max-w-4xl mx-auto ">
+            <img
+              src={director}
+              className="max-h-48 md:max-h-80 float-left pr-5"
+              alt="director image"
+            />
+
+            <p className="text-justify roboto">
+              {showFullMessage
+                ? fullMessage.split("\n\n").map((paragraph, index) => (
+                    <React.Fragment key={index}>
+                      {paragraph}
+                      <br />
+                    </React.Fragment>
+                  ))
+                : initialMessage.split("\n\n").map((paragraph, index) => (
+                    <React.Fragment key={index}>
+                      {paragraph}
+                      <br />
+                      <br />
+                    </React.Fragment>
+                  ))}
+              {showFullMessage && (
+                <span
+                  className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                  onClick={toggleMessage}
+                >
+                  Show Less..
+                </span>
+              )}
+              {!showFullMessage && (
+                <span
+                  className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                  onClick={toggleMessage}
+                >
+                  Read More..
+                </span>
+              )}
+            </p>
+          </div>
         </div>
-      </div>
+      </FadeIn>
 
       {/* our team */}
+
       <div className="max-w-4xl mx-auto poppins">
         <div className="uppercase  flex justify-center agencyProfile text-3xl mt-20">
           <h2 className="text-slate-950 font-bold">Our Team</h2>
@@ -242,8 +296,6 @@ export default function About() {
               <Slider {...settings}>
                 {teamData.map((d) => (
                   <div className="bg-blue-100 h-[150px] px-5 rounded-xl shadow-2xl hover:scale-95 hover:shadow-none flex justify-center items-center ">
-                    
-
                     <div className="flex flex-col justify-center items-center text-center ">
                       <h3 className="text-xl font-semibold my-5 text-slate-900">
                         {d.designation}
@@ -259,10 +311,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-    
-      
-  
     </div>
   );
 }

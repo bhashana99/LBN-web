@@ -20,7 +20,7 @@ export default function Header() {
     setShowMenu(!showMenu)
   }
   return (
-    <header className=" bg-slate-200 shadow-2xl sticky top-0 z-20 ">
+    <header className=" bg-slate-200 relative shadow-2xl left-0 right-0 top-0 z-20 ">
       <div className="flex justify-between items-center max-w-7xl mx-auto p-4">
         <Link to="/" className="z-20">
           <div className="  flex items-center gap-3">

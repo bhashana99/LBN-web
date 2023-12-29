@@ -29,8 +29,8 @@ export default function FadeIn({
             variants={{
                 hidden:{
                     opacity:0,
-                    x:direction === "right" ? -100 : direction === "left" ? 100 : 0,
-                    y:direction === "up" ? 100 : direction === "down" ? -100 : 0,
+                    x:direction === "right" ? -100 : direction === "left" ? 100 : direction === "middle" ? 0: 0,
+                    y:direction === "up" ? 100 : direction === "down" ? -100 : direction === "middle"? 0:0,
                 },
                 visible:{
                     opacity:1,
