@@ -76,9 +76,9 @@ export default function Footer() {
                   <p>+94 112 796 116</p>
                 </div>
               </div>
-              <div className="flex flex-wrap md:flex-row gap-3 items-center">
+              <div className="flex flex-row gap-3 items-center">
                 <MdEmail className="text-2xl text-green-800" />
-                <div  >
+                <div >
                   <p>info@lbnkeyresource.com</p>
                   <p>lbnkeyresource99@gmail.com </p>
                 </div>
