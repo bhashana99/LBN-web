@@ -291,13 +291,13 @@ man power to foreign principals, ticketing and travel agent.
           <h2 className="text-slate-950 font-bold">Our Team</h2>
         </div>
         <div className=" pb-10 ">
-          <div className="w-3/4 m-auto">
+          <div className="w-4/5 md:w-full m-auto">
             <div className="mt-10  ">
               <Slider {...settings}>
                 {teamData.map((d) => (
                   <div className="bg-blue-100 h-[150px] px-5 rounded-xl shadow-2xl hover:scale-95 hover:shadow-none flex justify-center items-center ">
                     <div className="flex flex-col justify-center items-center text-center ">
-                      <h3 className="text-xl font-semibold my-5 text-slate-900">
+                      <h3 className="text-xl font-semibold mb-2 md:my-5 text-slate-900">
                         {d.designation}
                       </h3>
                       <p className="text-semibold font-normal text-blue-900 ">

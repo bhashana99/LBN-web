@@ -37,10 +37,10 @@ export default function Footer() {
           </div>
         </div>
         {/* links */}
-        <div className="md:col-span-2">
-          <h1 className="text-2xl font-bold text-start md:text-center">Our Links</h1>
-          <hr className="w-36 h-1 md:mx-auto my-1  bg-gray-100 border-0 rounded md:my-1 dark:bg-gray-700" />
-          <div className="flex flex-col  mt-2 text-start items-start md:items-center justify-start">
+        <div className="md:col-span-2 my-5">
+          <h1 className="text-2xl font-bold  text-center">Our Links</h1>
+          <hr className="w-36 h-1 mx-auto my-1  bg-gray-100 border-0 rounded md:my-1 dark:bg-gray-700" />
+          <div className="flex flex-col  mt-2 items-center justify-start">
             <ul className="list-disc">
               <li className="hover:underline hover:text-blue-900">
                 <Link to="/">Home</Link>
