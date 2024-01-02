@@ -132,71 +132,86 @@ export default function About() {
     <div className="bg-white max-w-6xl  mx-auto w-full mb-10">
       <div className=" ">
         {/* agency profile */}
-      <div className="mt-10 md:mt-20 mx-3 md:mx-0">
-        <div className="uppercase  flex justify-center poppins text-4xl">
-          <FadeIn delay={0.2} direction="down" padding fullWidth>
-            <h1 className="font-semibold">
-              <span className="text-red-700">Agency</span> Profile
-            </h1>
-          </FadeIn>
-        </div>
-        <FadeIn delay={0.5} direction="middle" padding fullWidth>
-          <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
-            <p className="font-light">
-              <span className="font-semibold  text-slate-900">
-                LBN Key Resource (Pvt) Ltd
-              </span>{" "}
-              was established in 2006, with an experienced staff in the
-              recruiting field and has earned a prestigious name both in Sri
-              Lanka and abroad and absolutely clean, transparent and high
-              professionalism in manpower recruitment field.
-            </p>
-          </div>
-        </FadeIn>
-      </div>
-
-      {/* INTRODUCTION */}
-      <div className="mt-10 max-w-4xl mx-auto">
-        <div className="flex justify-center poppins">
-          <FadeIn delay={0.4} direction="middle" padding fullWidth>
-            <h1 className="uppercase  my-5 text-4xl font-semibold ">
-              INTRODUCTION
-            </h1>
-          </FadeIn>
-        </div>
-        <div className="grid grid-cols-3 gap-2 md:gap-4">
-          <div className="col-span-3 md:col-span-1">
-            <FadeIn delay={0.4} direction="right" padding fullWidth>
-              <img src={logo} alt="" className=" h-32 md:h-64" />
+        <div className="mt-10 md:mt-20 mx-3 md:mx-0">
+          <div className="uppercase  flex justify-center poppins text-4xl">
+            <FadeIn delay={0.2} direction="down" padding fullWidth>
+              <h1 className="font-semibold">
+                <span className="text-red-700">Agency</span> Profile
+              </h1>
             </FadeIn>
           </div>
+          <FadeIn delay={0.5} direction="middle" padding fullWidth>
+            <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
+              <p className="font-light">
+                <span className="font-semibold  text-slate-900">
+                  LBN Key Resource (Pvt) Ltd
+                </span>{" "}
+                was established in 2006, with an experienced staff in the
+                recruiting field and has earned a prestigious name both in Sri
+                Lanka and abroad and absolutely clean, transparent and high
+                professionalism in manpower recruitment field.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
 
-          <div className="col-span-3 md:col-span-2">
-            <ul className="list-disc ">
-              <FadeIn delay={0.4} direction="left" padding fullWidth>
-                <li className="mb-3"><p><span className="font-semibold">LBN Key Resource (Pvt) Ltd</span> is an authorized employment agency,
-approved by the bureau of foreign employment of Sri Lanka to act as
-an agent for foreign principals in recruiting and supplying
-personnel for all categories of foreign employment.</p></li>
+        {/* INTRODUCTION */}
+        <div className="mt-10 max-w-4xl mx-auto">
+          <div className="flex justify-center poppins">
+            <FadeIn delay={0.4} direction="middle" padding fullWidth>
+              <h1 className="uppercase  my-5 text-4xl font-semibold ">
+                INTRODUCTION
+              </h1>
+            </FadeIn>
+          </div>
+          <div className="grid grid-cols-3 gap-2 md:gap-4">
+            <div className="col-span-3 md:col-span-1">
+              <FadeIn delay={0.4} direction="right" padding fullWidth>
+                <img src={logo} alt="" className=" h-32 md:h-64" />
               </FadeIn>
-              <FadeIn delay={0.5} direction="left" padding fullWidth>
-                <li><p><span className="font-semibold">LBN Key Resource (Pvt) Ltd</span> was established in 2006 by a team of
-young experienced staff with and initial investment of Rs.2 Million.
-It has gained recognition in Sri Lanka as a one of
-the market leaders in the field of foreign employment.</p></li>
-              </FadeIn>
-              <FadeIn delay={0.8} direction="left" padding fullWidth>
-                <li>The <span className="font-semibold">main business</span> of LBN Key Resource (Pvt) Ltd consists of
-supplying of professionals, technical, skilled and unskilled
-man power to foreign principals, ticketing and travel agent.
-</li>
-              </FadeIn>
-            </ul>
+            </div>
+
+            <div className="col-span-3 md:col-span-2">
+              <ul className="list-disc ">
+                <FadeIn delay={0.4} direction="left" padding fullWidth>
+                  <li className="mb-3">
+                    <p>
+                      <span className="font-semibold">
+                        LBN Key Resource (Pvt) Ltd
+                      </span>{" "}
+                      is an authorized employment agency, approved by the bureau
+                      of foreign employment of Sri Lanka to act as an agent for
+                      foreign principals in recruiting and supplying personnel
+                      for all categories of foreign employment.
+                    </p>
+                  </li>
+                </FadeIn>
+                <FadeIn delay={0.5} direction="left" padding fullWidth>
+                  <li>
+                    <p>
+                      <span className="font-semibold">
+                        LBN Key Resource (Pvt) Ltd
+                      </span>{" "}
+                      was established in 2006 by a team of young experienced
+                      staff with and initial investment of Rs.2 Million. It has
+                      gained recognition in Sri Lanka as a one of the market
+                      leaders in the field of foreign employment.
+                    </p>
+                  </li>
+                </FadeIn>
+                <FadeIn delay={0.8} direction="left" padding fullWidth>
+                  <li>
+                    The <span className="font-semibold">main business</span> of
+                    LBN Key Resource (Pvt) Ltd consists of supplying of
+                    professionals, technical, skilled and unskilled man power to
+                    foreign principals, ticketing and travel agent.
+                  </li>
+                </FadeIn>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
 
       {/* vision and mission */}
 
@@ -308,6 +323,119 @@ man power to foreign principals, ticketing and travel agent.
                 ))}
               </Slider>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CORPORATE INFORMATION */}
+      <div className="max-w-4xl mx-auto poppins">
+        <div className="uppercase flex justify-center agencyProfile text-3xl mt-10">
+          <h2 className="text-slate-950 font-bold text-center">
+            CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
+          </h2>
+        </div>
+        <div className="flex flex-col md:flex-row m-5 items-center gap-6 mx-auto justify-center ">
+          <div className="">
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <div className="flex flex-row gap-4 items-center">
+              <div>
+                <p>BUSINESS</p>
+                <p className="font-semibold ml-5 text-slate-600">
+                  LIMITED LIABILITY COMPANY
+                </p>
+              </div>
+            </div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <div className="flex flex-row gap-4 items-center">
+              <div>
+                <p>NAME</p>
+                <p className="font-semibold ml-5 text-slate-600">
+                  LBN KEY RESOURCE (PVT) LTD
+                </p>
+              </div>
+            </div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <div className="flex flex-row gap-4 items-center ">
+              <div>
+                <p className="bg-rose-200">COMPANY REGISTRATION NUMBER</p>
+                <p className="font-semibold ml-5 text-slate-600">
+                  P V 00214762
+                </p>
+              </div>
+            </div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <div className="flex flex-row gap-4 items-center">
+              <div>
+                <p>OBJECT</p>
+                <p className="font-bold ml-5 text-slate-600">
+                  RECRUITER OF MAN POWER FOR <br />
+                  OVERSEAS MARKET
+                </p>
+              </div>
+            </div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <div className="flex flex-row gap-4 items-center">
+              <div>
+                <p>ACCREDITATION</p>
+                <p className="font-bold ml-5 text-red-600">LICENSE NO: 2227</p>
+              </div>
+            </div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2 hidden md:flex" />
+          </div>
+
+          <div>
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            <h4 className="text-center  my-4">Bank Details</h4>
+            
+            <div className="flex flex-row gap-4 items-center my-2">
+              <div>
+                <p>
+                BANKERS
+                </p>
+                <p className="font-semibold ml-5 text-slate-600">NDB BANK-MALABE BRANCH</p>
+              </div>
+            </div>
+            <hr />
+            
+            <div className="flex flex-row gap-4 items-center my-2">
+              <div>
+                <p>
+                ACCOUNT NAME
+                </p>
+                <p className="font-semibold ml-5 text-slate-600">LBN KEY RESOURCE (PVT) LTD</p>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-row gap-4 items-center my-2">
+              <div>
+                <p>
+                ACCOUNT NO
+                </p>
+                <p className="font-semibold ml-5 text-slate-600">101000865835</p>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-row gap-4 items-center my-2">
+              <div className="flex flex-row gap-4 text-center justify-center ">
+                <div>
+                  <p>BANK CODE</p>
+                  <p className="font-semibold  text-slate-600">7214</p>
+                </div>
+                <div>
+                  <p>BRANCH CODE</p>
+                  <p className="font-semibold  text-slate-600">31</p>
+                </div>
+              </div>
+             
+            </div>
+            <div className="text-center">
+                <p>SWIFT CODE</p>
+                <p className="font-semib text-slate-600">NDBSLKLX</p>
+              </div>
+            
+            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            
+            
           </div>
         </div>
       </div>
