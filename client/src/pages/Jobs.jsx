@@ -205,7 +205,7 @@ Manager`,
       <div>
         <div>
           <h4 className="text-center text-4xl font-semibold mt-10 mb-5">
-            CATOGARY OF WORKERS
+          CATEGORY OF WORKERS
           </h4>
         </div>
         <div className="flex justify-center ml-10">
