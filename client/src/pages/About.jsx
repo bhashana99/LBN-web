@@ -135,8 +135,8 @@ export default function About() {
         <div className="mt-10 md:mt-20 mx-3 md:mx-0">
           <div className="uppercase  flex justify-center poppins text-4xl">
             <FadeIn delay={0.2} direction="down" padding fullWidth>
-              <h1 className="font-semibold">
-                <span className="text-red-700">Agency</span> Profile
+              <h1 className="font-semibold text-center">
+                <span className="text-red-700 ">Agency</span> Profile
               </h1>
             </FadeIn>
           </div>
@@ -330,13 +330,17 @@ export default function About() {
       {/* CORPORATE INFORMATION */}
       <div className="max-w-4xl mx-auto poppins">
         <div className="uppercase flex justify-center agencyProfile text-3xl mt-10">
+        <FadeIn delay={0.2} direction="middle" padding fullWidth>
           <h2 className="text-slate-950 font-bold text-center">
             CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
           </h2>
+          </FadeIn>
         </div>
         <div className="flex flex-col md:flex-row m-5 items-center gap-6 mx-auto justify-center ">
           <div className="">
+          <FadeIn delay={0.2} direction="right" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+            
             <div className="flex flex-row gap-4 items-center">
               <div>
                 <p>BUSINESS</p>
@@ -345,6 +349,8 @@ export default function About() {
                 </p>
               </div>
             </div>
+            </FadeIn>
+            <FadeIn delay={0.3} direction="right" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             <div className="flex flex-row gap-4 items-center">
               <div>
@@ -354,6 +360,8 @@ export default function About() {
                 </p>
               </div>
             </div>
+            </FadeIn>
+            <FadeIn delay={0.4} direction="right" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             <div className="flex flex-row gap-4 items-center ">
               <div>
@@ -363,6 +371,8 @@ export default function About() {
                 </p>
               </div>
             </div>
+            </FadeIn>
+            <FadeIn delay={0.5} direction="right" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             <div className="flex flex-row gap-4 items-center">
               <div>
@@ -373,6 +383,8 @@ export default function About() {
                 </p>
               </div>
             </div>
+            </FadeIn>
+            <FadeIn delay={0.6} direction="right" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             <div className="flex flex-row gap-4 items-center">
               <div>
@@ -381,12 +393,15 @@ export default function About() {
               </div>
             </div>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2 hidden md:flex" />
+            </FadeIn>
           </div>
 
           <div>
+          <FadeIn delay={0.2} direction="left" padding fullWidth>
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             <h4 className="text-center  my-4">Bank Details</h4>
-            
+            </FadeIn>
+            <FadeIn delay={0.3} direction="left" padding fullWidth>
             <div className="flex flex-row gap-4 items-center my-2">
               <div>
                 <p>
@@ -396,7 +411,8 @@ export default function About() {
               </div>
             </div>
             <hr />
-            
+            </FadeIn>
+            <FadeIn delay={0.4} direction="left" padding fullWidth>
             <div className="flex flex-row gap-4 items-center my-2">
               <div>
                 <p>
@@ -406,7 +422,9 @@ export default function About() {
               </div>
             </div>
             <hr />
-            <div className="flex flex-row gap-4 items-center my-2">
+            </FadeIn>
+            <FadeIn delay={0.3} direction="left" padding fullWidth>
+            <div className="flex flex-row gap-4 items-center  my-2">
               <div>
                 <p>
                 ACCOUNT NO
@@ -415,6 +433,8 @@ export default function About() {
               </div>
             </div>
             <hr />
+            </FadeIn>
+            <FadeIn delay={0.4} direction="up" padding fullWidth>
             <div className="flex flex-row gap-4 items-center my-2">
               <div className="flex flex-row gap-4 text-center justify-center ">
                 <div>
@@ -434,7 +454,7 @@ export default function About() {
               </div>
             
             <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            
+            </FadeIn>
             
           </div>
         </div>
