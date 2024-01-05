@@ -20,6 +20,7 @@ export default function Jobs() {
   const DUBAI = "AE";
   const POLAND = "PL";
   const MALDIVES = "MV";
+  const SouthKorea = "KR";
 
   const [selectedJob, setSelectedJob] = useState("null");
 
@@ -27,20 +28,102 @@ export default function Jobs() {
     setSelectedJob((prevJob) => (prevJob === jobId ? null : jobId));
   };
 
+  const pipelineTableData = [
+    {
+      country: `South Korea`,
+      company: [
+        {
+          clients: `Hyundai Harbor Durban, South Korea`,
+          jobs: [
+            {
+              category: `Skilled`,
+              title: [`Shipbuilder`],
+            },
+          ],
+        },
+        {
+          clients: `DS Corporation Ulsan, South Korea`,
+          jobs: [
+            {
+              category: `Professional`,
+              title: [
+                `Mechanical Engineer`,
+                `Civil Engineer`,
+                `Electrical Engineer`,
+                `Chemical Engineer`,
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      country: `Poland`,
+      company: [
+        {
+          clients: `Hebi Bud SP Z.O.O. 55-040, Tyniec Maly, Poland`,
+          jobs: [
+            {
+              category: `Skilled`,
+              title: [`Production Line Worker`],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      country: `Qatar`,
+      company: [
+        {
+          clients: `Blue Black Properties P.O.Box.2417, Doha, Qatar`,
+          jobs: [
+            {
+              category: `Professional`,
+              title: [
+                `Maintenance Engineer`,
+                `Facilities Engineer`,
+                `AC/QC Engineer`,
+                `Project Engineer`,
+                `Estimation Engineer`,
+              ],
+            },
+            {
+              category: `Skilled`,
+              title: [
+                `Plumbing Supervisor`,
+                `Admin. Assistant`,
+                `Logistic Executive`,
+                `Maintenance Technician`,
+                `Mason-Tile /Bricks`,
+                `Carpenter-Finish/Shattering`,
+                `Steel Fixer`,
+                `Wall Painter`,
+                `Plumber`,
+                `Electrician`,
+                `Welder`,
+                `AC Technician`,
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
   const jobPositions = [
     {
       title: `CONSTRUCTION`,
       id: `construction`,
       image: construction,
       jobs: [
-       `Unskilled Labors Janitors`,
-       `Assistants to Carpenter / Mason / Plumber/ Electrician`,
-       `Cook, Carpenter, Mason, Electrician,H/E Operator, Plumber, Welder, Mechanic Clerk, Store-Keeper, Concrete finisher ,Tile Layer`,
-       `Categorized & Specialized Workers`,
-       `Forman, Warehouseman, Junior Administrator, Senior Clerk`,
-       `Surveyor, Draughtsman, Part qualified or professionally Qualified Accountant`,
-       `Junior Engineer, Qualified Accountant, Senior Administrator`,
-       `Medical Doctor (MBBS)`
+        `Unskilled Labors Janitors`,
+        `Assistants to Carpenter / Mason / Plumber/ Electrician`,
+        `Cook, Carpenter, Mason, Electrician,H/E Operator, Plumber, Welder, Mechanic Clerk, Store-Keeper, Concrete finisher ,Tile Layer`,
+        `Categorized & Specialized Workers`,
+        `Forman, Warehouseman, Junior Administrator, Senior Clerk`,
+        `Surveyor, Draughtsman, Part qualified or professionally Qualified Accountant`,
+        `Junior Engineer, Qualified Accountant, Senior Administrator`,
+        `Medical Doctor (MBBS)`,
       ],
     },
     {
@@ -161,7 +244,6 @@ Manager`,
       image: artist,
       jobs: [`Designer`, `Artist`],
     },
-   
   ];
 
   return (
@@ -205,7 +287,7 @@ Manager`,
       <div>
         <div>
           <h4 className="text-center text-4xl font-semibold mt-10 mb-5">
-          CATEGORY OF WORKERS
+            CATEGORY OF WORKERS
           </h4>
         </div>
         <div className="flex justify-center ml-10">
@@ -222,7 +304,6 @@ Manager`,
           </ul>
         </div>
       </div>
-      
 
       {jobPositions.map((job) => (
         <div key={job.id} id={job.id} className="my-10 max-w-4xl mx-auto">
@@ -252,6 +333,71 @@ Manager`,
           )}
         </div>
       ))}
+      {/* pipeline */}
+      <div>
+        <div>
+          <h1 className="text-center text-4xl font-semibold mt-10 mb-5">
+            PROJECTS IN PIPELINE <br />{" "}
+            <span className="text-red-700 text-sm ">
+              (FOR THE YEAR 2023 / 2024)
+            </span>
+          </h1>
+        </div>
+        <div>
+          <table className="mx-auto border-collapse border-2 border-gray-500">
+            <thead>
+              <tr>
+                <th className="border border-gray-500 p-3">Country</th>
+                <th className="border border-gray-500 p-3">
+                  Clients Reference
+                </th>
+                <th className="border border-gray-500 p-3">Job Category</th>
+                <th className="border border-gray-500 p-3">Job Title</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pipelineTableData.map((data, index) => (
+                <tr key={index} >
+                  <td className="border border-gray-500 p-3 ">{data.country}</td>
+                  <td className="border border-gray-500 p-3">
+                    {data.company.map((company, idx) => (
+                      <div key={idx}>{company.clients}</div>
+                    ))}
+                  </td>
+                  <td className="border border-gray-500 p-3">
+                    {data.company.map((company, idx) => (
+                      <div key={idx} >
+                        {company.jobs.map((job, ind) => (
+                          <div key={ind}>
+                            <p>{job.category}</p>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </td>
+                  <td className="border border-gray-500 p-3">
+                    {data.company.map((company, idx) => (
+                      <div key={idx}>
+                        {company.jobs.map((job, ind) => (
+                          <div key={ind}>
+                            {job.title.map((title, i) => (
+                              <p key={i}>{title}</p>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      
+
     </div>
   );
 }
