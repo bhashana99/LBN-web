@@ -344,7 +344,7 @@ Manager`,
           </h1>
         </div>
         <div>
-          <table className="mx-auto border-collapse border-2 border-gray-500">
+          <table className="mx-auto border-collapse border-2 border-gray-500 table-auto">
             <thead>
               <tr>
                 <th className="border border-gray-500 p-3">Country</th>

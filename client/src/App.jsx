@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Jobs from "./pages/Jobs";
 import Footer from "./components/Footer";
+import SignIn from "./pages/SignIn";
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/sign-in" element={<SignIn/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

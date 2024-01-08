@@ -19,7 +19,7 @@ export default function Footer() {
         <div className=" md:col-span-3 ">
           <div className="grid grid-cols-3 items-center">
             <div>
-              <Link to="">
+              <Link to="/sign-in">
                 <img src={logo} alt="" className="w-28 md:w-40 " />
               </Link>
             </div>
