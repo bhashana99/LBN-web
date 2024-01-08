@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import adminRouter from './routes/admin.route.js';
 
 dotenv.config();
 
@@ -15,7 +16,10 @@ mongoose
 
 const app = express();
 
+app.use(express.json());
+
 app.listen(3000, ()=>{
     console.log('Server is running port 3000');
 })
 
+app.use('/api/admin', adminRouter)
