@@ -2,8 +2,10 @@ import { Link,useLocation } from "react-router-dom";
 import { useState } from "react";
 import logo from "./../assets/images/LBN.png";
 import {AiOutlineClose,AiOutlineMenu} from 'react-icons/ai'
+import {useSelector} from 'react-redux'
 
 export default function Header() {
+  const {currentAdmin} = useSelector(state => state.admin)
   const [showMenu, setShowMenu] = useState(true);
   const location = useLocation();
 
@@ -44,6 +46,19 @@ export default function Header() {
           <Link to='/jobs' className={`sm:inline ${isJobsPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>Jobs</li></Link>
           <Link  to='/about' className={`sm:inline ${isAboutPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>About</li></Link>
           <Link to='/contact' className={`sm:inline ${isContactPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li >Contact</li></Link>
+          
+          {
+            currentAdmin ? (
+              <Link to="/profile" >
+                 <img
+                className="rounded-full h-7 w-7 object-cover"
+                src={currentAdmin.avatar}
+                alt="profile"
+              />
+              </Link>
+            ) : ("")
+          }
+
         </ul>
         <div onClick={handleMenu} className="block md:hidden">
           {!showMenu ? <AiOutlineClose size={30}  /> : <AiOutlineMenu size={30}/> }
