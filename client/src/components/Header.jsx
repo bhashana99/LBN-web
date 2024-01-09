@@ -41,7 +41,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <ul className="hidden md:flex gap-4 min-w-3xl uppercase headerList">
+        <ul className="hidden md:flex gap-4 min-w-3xl uppercase headerList items-center">
           <Link  to="/" className={`sm:inline ${isHomePage ? 'text-slate-600 text-2xl font-semibold ' : "text-slate-900"}  hover:underline`}><li>Home</li></Link>
           <Link to='/jobs' className={`sm:inline ${isJobsPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>Jobs</li></Link>
           <Link  to='/about' className={`sm:inline ${isAboutPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>About</li></Link>
