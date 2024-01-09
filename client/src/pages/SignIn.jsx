@@ -1,13 +1,19 @@
 import React from "react";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
+import {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+} from "./../redux/admin/adminSlice.js";
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const {loading,error} = useSelector((state) => state.admin);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -15,33 +21,27 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+   dispatch(signInStart());
     try {
-      const res = await fetch("/api/admin/login-admin",{
+      const res = await fetch("/api/admin/login-admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      
       });
       const data = await res.json();
-      
-      if(data.success === false){
-        setError(data.message)
-        setLoading(false)
-        return
+
+      if (data.success === false) {
+        dispatch(signInFailure(data.message));
+        return;
       }
-      setLoading(false);
-      setError(null);
+      dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
-      setLoading(false);
-      setError(error.message);
+      dispatch(signInFailure(error.message));
     }
-   
-  }
-
+  };
 
   return (
     <div className="bg-slate-50">
@@ -62,13 +62,15 @@ export default function SignIn() {
             id="password"
             onChange={handleChange}
           />
-          <button disabled={loading} className="bg-slate-700 p-3 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
-             {loading ? 'Loading...' : 'Sign In'} 
+          <button
+            disabled={loading}
+            className="bg-slate-700 p-3 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+          >
+            {loading ? "Loading..." : "Sign In"}
           </button>
         </form>
         {error && <p className="text-red-700 mt-5">{error}</p>}
       </div>
-     
     </div>
   );
 }
