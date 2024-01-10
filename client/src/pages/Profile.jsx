@@ -2,6 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { app } from "../firebase";
+import { useDispatch } from "react-redux";
+import { updateAdminFailure, updateAdminStart, updateAdminSuccess } from "../redux/admin/adminSlice.js";
+
 
 export default function Profile() {
   const fileRef = useRef(null);
@@ -10,6 +13,9 @@ export default function Profile() {
   const [filePrec, setFilePrec] = useState(0);
   const [fileUploadError, setFileUploadError] = useState(false);
   const [formData, setFormData] = useState({});
+  const [updateSuccess, setUpdateSuccess] = useState(false);
+
+  const dispatch = useDispatch();
   // console.log(formData);
 
   useEffect(() => {
@@ -17,6 +23,10 @@ export default function Profile() {
       handleFileUpload(file);
     }
   }, [file]);
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
 
   const handleFileUpload = (file) => {
     const storage = getStorage(app);
@@ -39,10 +49,35 @@ export default function Profile() {
     });
   };
 
+ 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      dispatch(updateAdminStart());
+      const res = await fetch(`/api/admin/update-admin/${currentAdmin._id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success == false) {
+        dispatch(updateAdminFailure(data.message));
+        return;
+      }
+      dispatch(updateAdminSuccess(data));
+      setUpdateSuccess(true);
+    } catch (error) {
+      dispatch(updateAdminFailure(error));
+    }
+  };
+
   return (
     <div className="p-3 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
-      <form className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           onChange={(e) => setFile(e.target.files[0])}
           type="file"
@@ -74,6 +109,8 @@ export default function Profile() {
           placeholder="username"
           className="border p-3 rounded-lg"
           id="username"
+          defaultValue={currentAdmin.username}
+          onChange={handleChange}
         />
 
         <input
@@ -81,13 +118,14 @@ export default function Profile() {
           placeholder="password"
           className="border p-3 rounded-lg"
           id="password"
+          onChange={handleChange}
         />
         <button className="bg-slate-700 text-white uppercase rounded-lg p-3 hover:opacity-95">
           update
         </button>
       </form>
-      <div className="flex justify-between mt-5">
-        <span className="text-red-700 cursor-pointer">Delete account</span>
+      <div className="flex justify-end mt-5">
+        
         <span className="text-red-700 cursor-pointer">Sign out</span>
       </div>
     </div>
