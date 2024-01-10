@@ -139,8 +139,9 @@ export default function Profile() {
           update
         </button>
       </form>
-      <div className="flex justify-end mt-5">
+      <div className="flex justify-between mt-5">
         
+        <span className="text-green-700 cursor-pointer " >Admin Panel</span>
         <span className="text-red-700 cursor-pointer" onClick={handleSignOut}>Sign out</span>
       </div>
     </div>
