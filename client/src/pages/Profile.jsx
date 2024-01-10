@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
-import { updateAdminFailure, updateAdminStart, updateAdminSuccess } from "../redux/admin/adminSlice.js";
+import { updateAdminFailure, updateAdminStart, updateAdminSuccess,signOutAdminFailure,signOutAdminStart,signOutAdminSuccess } from "../redux/admin/adminSlice.js";
 
 
 export default function Profile() {
@@ -23,7 +23,7 @@ export default function Profile() {
       handleFileUpload(file);
     }
   }, [file]);
-  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -71,6 +71,21 @@ export default function Profile() {
       setUpdateSuccess(true);
     } catch (error) {
       dispatch(updateAdminFailure(error));
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      dispatch(signOutAdminStart());
+      const res = await fetch("/api/admin/signout");
+      const data = await res.json();
+      if (data.success === false) {
+        dispatch(signOutAdminFailure(data.message));
+        return;
+      }
+      dispatch(signOutAdminSuccess(data));
+    } catch (error) {
+      dispatch(signOutAdminFailure(error.message));
     }
   };
 
@@ -126,7 +141,7 @@ export default function Profile() {
       </form>
       <div className="flex justify-end mt-5">
         
-        <span className="text-red-700 cursor-pointer">Sign out</span>
+        <span className="text-red-700 cursor-pointer" onClick={handleSignOut}>Sign out</span>
       </div>
     </div>
   );
