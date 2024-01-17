@@ -10,11 +10,13 @@ import { updateAdminFailure, updateAdminStart, updateAdminSuccess,signOutAdminFa
 export default function Profile() {
   const fileRef = useRef(null);
   const [file, setFile] = useState(undefined);
-  const { currentAdmin } = useSelector((state) => state.admin);
+  const { currentAdmin,loading,error } = useSelector((state) => state.admin);
   const [filePrec, setFilePrec] = useState(0);
   const [fileUploadError, setFileUploadError] = useState(false);
   const [formData, setFormData] = useState({});
   const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [showVacancyError, setShowVacancyError] = useState(false);
+  const [showVacancy, setShowVacancy] = useState([]);
 
   const dispatch = useDispatch();
   // console.log(formData);
@@ -90,6 +92,22 @@ export default function Profile() {
     }
   };
 
+  const handleShowVacancy = async () => {
+    try {
+      setShowVacancyError(false);
+      const res = await fetch("/api/vacancy/get-vacancies");
+      const data = await res.json();
+      if (data.success === false) {
+        setShowVacancyError(true);
+        return;
+      }
+      setShowVacancy(data);
+    } catch (error) {
+      setShowVacancyError(true);
+      console.log(showVacancyError)
+    }
+  }
+
   return (
     <div className="p-3 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -136,8 +154,8 @@ export default function Profile() {
           id="password"
           onChange={handleChange}
         />
-        <button className="bg-slate-700 text-white uppercase rounded-lg p-3 hover:opacity-95">
-          update
+        <button disabled={loading} className="bg-slate-700 text-white uppercase rounded-lg p-3 hover:opacity-95">
+        {loading ? "Loading..." : "Update"}
         </button>
         <Link
           to={"/create-vacancy"}
@@ -150,7 +168,50 @@ export default function Profile() {
         
         <span className="text-green-700 cursor-pointer " >Admin Panel</span>
         <span className="text-red-700 cursor-pointer" onClick={handleSignOut}>Sign out</span>
+
       </div>
+      <p className="text-red-700 mt-5">{error ? error : ""}</p>
+      <p className="text-green-700 mt-5">
+        {updateSuccess ? "User is updated successfully!" : ""}
+      </p>
+      <button onClick={handleShowVacancy} className="text-green-700 w-full">
+        Show Vacancy
+      </button>
+      <p className="text-red-700 mt-5">
+        {" "}
+        {showVacancyError ? "Error showing Listing" : ""}
+      </p>
+
+      {showVacancy && showVacancy.length > 0 &&
+        <div className="flex flex-col gap-4 ">
+          <h1 className=" text-center mt-5 text-2xl font-semibold">Vacancies</h1>
+          {showVacancy.map((vacancy) => (
+        <div
+          key={vacancy._id}
+          className="border rounded-lg p-3 flex justify-between items-center gap-4"
+        >
+          <Link to={`/vacancy/${vacancy._id}`}>
+            <img
+              src={vacancy.countryFlag}
+              alt="country flag"
+              className="h-16 w-16 object-contain "
+            />
+          </Link>
+          <Link className="flex-1 text-slate-700 font-semibold hover:underline truncate" to={`/vacancy/${vacancy._id}`}>
+            <p >{vacancy.title}</p>
+          </Link>
+
+          <div className="flex flex-col items-center">
+            <button  className="text-red-700 uppercase">delete</button>
+            <Link>
+              <button className="text-green-700 uppercase">edit</button>
+            </Link>
+            
+          </div>
+        </div>
+      ))}
+        </div>
+      }
     </div>
   );
 }
