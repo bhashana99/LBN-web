@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./pages/Profile";
+import CreateVacancy from "./pages/CreateVacancy";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/sign-in" element={<SignIn/>}/>
         <Route element={<PrivateRoute/>} >
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/create-vacancy" element={<CreateVacancy/>} />
         </Route>
       </Routes>
       <Footer />

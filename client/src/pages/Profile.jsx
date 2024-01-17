@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { updateAdminFailure, updateAdminStart, updateAdminSuccess,signOutAdminFailure,signOutAdminStart,signOutAdminSuccess } from "../redux/admin/adminSlice.js";
 
 
@@ -138,6 +139,12 @@ export default function Profile() {
         <button className="bg-slate-700 text-white uppercase rounded-lg p-3 hover:opacity-95">
           update
         </button>
+        <Link
+          to={"/create-vacancy"}
+          className="bg-green-700 uppercase rounded-lg text-center p-3 text-white hover:opacity-95"
+        >
+          Create Vacancy
+        </Link>
       </form>
       <div className="flex justify-between mt-5">
         
