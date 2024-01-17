@@ -10,11 +10,11 @@ const vacancySchema = new mongoose.Schema(
             type:String,
             required:true,
         },
-        salaryRange:{
+        salary:{
             type:String,
             required:true,
         },
-        location:{
+        address:{
             type:String,
             required:true,
         },

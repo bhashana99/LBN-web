@@ -6,10 +6,12 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "../firebase.js";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateListing() {
   const [formData, setFormData] = useState({
-    flagUrl: "",
+    countryFlag: "",
     title: "",
     country: "",
     description: "",
@@ -20,14 +22,18 @@ export default function CreateListing() {
     accommodation: false,
     medical: false,
     airTicket: false,
+    
   });
 
+  const {currentAdmin} = useSelector((state) => state.admin)
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [imageUploadError, setImageUploadError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error,setError] = useState(false);
+  const navigate = useNavigate();
 
-  // console.log(formData);
+  
 
   const handleFlagUpload = (e) => {
     e.preventDefault();
@@ -39,7 +45,7 @@ export default function CreateListing() {
           setUploading(false);
           setFormData({
             ...formData,
-            flagUrl: url,
+            countryFlag: url,
           });
         })
         .catch((error) => {
@@ -64,7 +70,7 @@ export default function CreateListing() {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log("Upload is " + progress + "% done");
+          // console.log("Upload is " + progress + "% done");
         },
         (error) => {
           reject(error);
@@ -85,7 +91,7 @@ export default function CreateListing() {
   const handleRemoveImage = () => {
     setFormData({
       ...formData,
-      flagUrl: "",
+      countryFlag: "",
     });
   };
 
@@ -104,12 +110,47 @@ export default function CreateListing() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if(formData.countryFlag === "") {
+        setImageUploadError("Please upload a country flag");
+        return;
+      }
+
+      setLoading(true);
+      setError(false);
+      const res = await fetch('/api/vacancy/create-vacancy', {
+        method: 'POST',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+
+        body: JSON.stringify({
+          ...formData,
+          adminRef: currentAdmin._id,
+        }),
+      });
+
+      const data = await res.json();
+      console.log("Server Response:", data);
+      setLoading(false);
+      if(data.success === false){
+        setError(data.message);
+      }
+      // navigate(`/vacancy/${data._id}`)
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
+    }
+  }
+
   return (
     <main className="p-3 max-w-4xl mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">
         Create a Vacancy
       </h1>
-      <form className="flex flex-col sm:flex-row gap-4">
+      <form onSubmit={handleSubmit}  className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col gap-4 flex-1">
           <input
             type="text"
@@ -219,18 +260,21 @@ export default function CreateListing() {
               onChange={(e) => setFile(e.target.files)}
             />
             <button
+            disabled={uploading}
+            type="button"
+
               onClick={handleFlagUpload}
               className="p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
             >
-              Upload
+              {uploading ? "Uploading..." : "Upload"}
             </button>
           </div>
 
           <p className="text-red-700">{imageUploadError && imageUploadError}</p>
 
-          {formData.flagUrl ? (
+          {formData.countryFlag ? (
             <div className="flex justify-between p-3 border items-center">
-              <img src={formData.flagUrl} alt="country flag"  className="w-30 h-20 object-contain rounded-lg" />
+              <img src={formData.countryFlag} alt="country flag"  className="w-30 h-20 object-contain rounded-lg" />
               <button
                 onClick={() => handleRemoveImage()}
                 type="button"
@@ -243,9 +287,10 @@ export default function CreateListing() {
             ""
           )}
 
-          <button className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
-            Create Vacancy
+          <button disabled={loading || uploading} className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
+           {loading ? "Creating..." : "Create Vacancy"}
           </button>
+          {error && <p className="text-red-700">{error}</p>}
         </div>
       </form>
     </main>
