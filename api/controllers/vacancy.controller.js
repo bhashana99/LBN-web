@@ -10,3 +10,13 @@ export const createVacancy = async (req, res, next) => {
     }
    
 }
+
+export const getVacancies = async (req, res, next) => {
+    try {
+        const vacancies = await Vacancy.find();
+        if(!vacancies) return next(errorHandler(404, "No vacancies found"));
+         res.status(200).json(vacancies);
+    } catch (error) {
+        next(error);
+    }
+}
