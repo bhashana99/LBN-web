@@ -9,6 +9,7 @@ import SignIn from "./pages/SignIn";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./pages/Profile";
 import CreateVacancy from "./pages/CreateVacancy";
+import UpdateVacancy from "./pages/UpdateVacancy";
 
 
 export default function App() {
@@ -24,6 +25,8 @@ export default function App() {
         <Route element={<PrivateRoute/>} >
           <Route path="/profile" element={<Profile/>} />
           <Route path="/create-vacancy" element={<CreateVacancy/>} />
+          <Route path="/update-vacancy/:id" element={<UpdateVacancy/>} />
+
         </Route>
       </Routes>
       <Footer />
