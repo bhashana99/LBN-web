@@ -108,6 +108,24 @@ export default function Profile() {
     }
   }
 
+  const handleVacancyDelete = async(vacancyId) => {
+    try {
+      const res = await fetch(`/api/vacancy/delete-vacancy/${vacancyId}`,{
+        method:"DELETE"
+      
+      });
+      const data = await res.json();
+      if(data.success === false){
+        console.log(data.message)
+        return;
+      }
+
+      setShowVacancy((prev) => prev.filter((vacancy)=>vacancy._id !== vacancyId))
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   return (
     <div className="p-3 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -202,7 +220,7 @@ export default function Profile() {
           </Link>
 
           <div className="flex flex-col items-center">
-            <button  className="text-red-700 uppercase">delete</button>
+            <button onClick={()=>handleVacancyDelete(vacancy._id)}  className="text-red-700 uppercase">delete</button>
             <Link>
               <button className="text-green-700 uppercase">edit</button>
             </Link>

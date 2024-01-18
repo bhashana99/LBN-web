@@ -20,3 +20,19 @@ export const getVacancies = async (req, res, next) => {
         next(error);
     }
 }
+
+export const deleteVacancy = async (req, res, next) => {
+    const vacancy = await Vacancy.findById(req.params.id);
+
+    if(!vacancy){
+        return next(errorHandler(404, "Vacancy not found"));
+    }
+
+    try {
+        await Vacancy.findByIdAndDelete(req.params.id);
+        res.status(200).json({message: "Vacancy deleted successfully"});
+    } catch (error) {
+        next(error);
+        
+    }
+}
