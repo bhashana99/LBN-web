@@ -138,7 +138,7 @@ export default function CreateListing() {
       if(data.success === false){
         setError(data.message);
       }
-      // navigate(`/vacancy/${data._id}`)
+      navigate(`/vacancy/${data._id}`)
     } catch (error) {
       setError(error.message);
       setLoading(false);

@@ -52,3 +52,13 @@ export const updateVacancy = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getVacancy = async (req, res, next) => {
+    try {
+        const vacancy = await Vacancy.findById(req.params.id);
+        if(!vacancy) return next(errorHandler(404,"Vacancy not found"));
+        res.status(200).json(vacancy);
+    } catch (error) {
+        next(error);
+    }
+}
