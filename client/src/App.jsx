@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./pages/Profile";
 import CreateVacancy from "./pages/CreateVacancy";
 import UpdateVacancy from "./pages/UpdateVacancy";
+import Vacancy from "./pages/Vacancy";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/sign-in" element={<SignIn/>}/>
+        <Route path="/vacancy/:id" element={<Vacancy/>}/>
         <Route element={<PrivateRoute/>} >
           <Route path="/profile" element={<Profile/>} />
           <Route path="/create-vacancy" element={<CreateVacancy/>} />
