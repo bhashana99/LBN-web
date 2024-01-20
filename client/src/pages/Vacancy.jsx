@@ -1,6 +1,7 @@
 import { set } from "mongoose";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { MdOutlineLocationCity,MdFlight } from "react-icons/md";
 import { TbWorldPin } from "react-icons/tb";
@@ -144,7 +145,10 @@ export default function Vacancy() {
             </div>
           </div>
           <div className="text-center mb-10 ">
-          <button className="w-full  py-5 text-center font-bold text-white bg-green-600 hover:bg-green-700 rounded-md">Apply</button>
+            <Link to={vacancy.googleFormLink}>
+            <button className="w-full  py-5 text-center font-bold text-white bg-green-600 hover:bg-green-700 rounded-md">Apply</button>
+
+            </Link>
           </div>
         </div>
       )}

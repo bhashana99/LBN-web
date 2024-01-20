@@ -22,6 +22,7 @@ export default function CreateListing() {
     accommodation: false,
     medical: false,
     airTicket: false,
+    googleFormLink: "",
     
   });
 
@@ -250,6 +251,15 @@ export default function CreateListing() {
               <span>Air Ticket</span>
             </div>
           </div>
+          <input
+            type="text"
+            placeholder="Google Form Link"
+            className="border p-3 rounded-lg"
+            id="googleFormLink"
+            required
+            onChange={handleChange}
+            value={formData.googleFormLink}
+          />
           <p className="font-semibold">Country Flag:</p>
           <div className="flex gap-4">
             <input
@@ -268,8 +278,9 @@ export default function CreateListing() {
             >
               {uploading ? "Uploading..." : "Upload"}
             </button>
+           
           </div>
-
+         
           <p className="text-red-700">{imageUploadError && imageUploadError}</p>
 
           {formData.countryFlag ? (

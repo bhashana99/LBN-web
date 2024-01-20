@@ -49,7 +49,11 @@ const vacancySchema = new mongoose.Schema(
         adminRef:{
             type:String,
             required:true,
-        }
+        },
+        googleFormLink:{
+            type:String,
+            required:true,
+        },
     },{timestamps:true});
 
     const Vacancy = mongoose.model("Vacancy", vacancySchema);
