@@ -69,7 +69,21 @@ export default function Header() {
         <div className={!showMenu ? 'fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900  bg-slate-200 ease-in-out duration-500 ' : 'fixed left-[-100%] '}>
           
           <ul className="pt-24 uppercase headerList">
-           
+            {
+              currentAdmin ? (
+                <Link to="/profile" onClick={handleClick}>
+                  <div className="flex flex-row items-center gap-3">
+                  <img
+                    className="rounded-full h-7 w-7 object-cover ml-5"
+                    src={currentAdmin.avatar}
+                    alt="profile"
+                  />
+                  <h3 className="lowercase font-bold">{currentAdmin.username}</h3>
+                  </div>
+                  
+                </Link>
+              ) : ("")
+            }
           <Link to='/' onClick={handleClick}><li className="p-3 border-b border-slate-50">Home</li></Link>
           <Link to='/jobs' onClick={handleClick}><li className="p-3 border-b border-slate-50">Jobs</li></Link>
           <Link to='/vacancies' onClick={handleClick}><li className="p-3 border-b border-slate-50">Vacancies</li></Link>
