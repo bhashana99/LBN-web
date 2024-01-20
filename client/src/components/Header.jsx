@@ -13,6 +13,7 @@ export default function Header() {
   const isAboutPage = location.pathname === '/about';
   const isJobsPage = location.pathname === '/jobs';
   const isContactPage = location.pathname === '/contact';
+  const isVacanciesPage = location.pathname === '/vacancies';
 
   const handleMenu = () =>{
     setShowMenu(!showMenu);
@@ -44,6 +45,7 @@ export default function Header() {
         <ul className="hidden md:flex gap-4 min-w-3xl uppercase headerList items-center">
           <Link  to="/" className={`sm:inline ${isHomePage ? 'text-slate-600 text-2xl font-semibold ' : "text-slate-900"}  hover:underline`}><li>Home</li></Link>
           <Link to='/jobs' className={`sm:inline ${isJobsPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>Jobs</li></Link>
+          <Link to='/vacancies' className={`sm:inline ${isVacanciesPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>Vacancies</li></Link>
           <Link  to='/about' className={`sm:inline ${isAboutPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li>About</li></Link>
           <Link to='/contact' className={`sm:inline ${isContactPage ? 'text-slate-600 text-2xl font-semibold' : "text-slate-900"}  hover:underline`}><li >Contact</li></Link>
           
@@ -67,10 +69,12 @@ export default function Header() {
         <div className={!showMenu ? 'fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900  bg-slate-200 ease-in-out duration-500 ' : 'fixed left-[-100%] '}>
           
           <ul className="pt-24 uppercase headerList">
+           
           <Link to='/' onClick={handleClick}><li className="p-3 border-b border-slate-50">Home</li></Link>
-          <Link to='jobs' onClick={handleClick}><li className="p-3 border-b border-slate-50">Jobs</li></Link>
-          <Link to='about' onClick={handleClick}><li className="p-3 border-b border-slate-50">About</li></Link>
-          <Link to='contact' onClick={handleClick}><li className="p-3 border-b border-slate-50">Contact</li></Link>
+          <Link to='/jobs' onClick={handleClick}><li className="p-3 border-b border-slate-50">Jobs</li></Link>
+          <Link to='/vacancies' onClick={handleClick}><li className="p-3 border-b border-slate-50">Vacancies</li></Link>
+          <Link to='/about' onClick={handleClick}><li className="p-3 border-b border-slate-50">About</li></Link>
+          <Link to='/contact' onClick={handleClick}><li className="p-3 border-b border-slate-50">Contact</li></Link>
           </ul>
         </div>
       </div>

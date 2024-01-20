@@ -11,7 +11,7 @@ import Profile from "./pages/Profile";
 import CreateVacancy from "./pages/CreateVacancy";
 import UpdateVacancy from "./pages/UpdateVacancy";
 import Vacancy from "./pages/Vacancy";
-
+import Vacancies from "./pages/Vacancies";
 
 export default function App() {
   return (
@@ -22,13 +22,13 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/jobs" element={<Jobs />} />
-        <Route path="/sign-in" element={<SignIn/>}/>
-        <Route path="/vacancy/:id" element={<Vacancy/>}/>
-        <Route element={<PrivateRoute/>} >
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/create-vacancy" element={<CreateVacancy/>} />
-          <Route path="/update-vacancy/:id" element={<UpdateVacancy/>} />
-
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/vacancy/:id" element={<Vacancy />} />
+        <Route path="/vacancies" element={<Vacancies />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/create-vacancy" element={<CreateVacancy />} />
+          <Route path="/update-vacancy/:id" element={<UpdateVacancy />} />
         </Route>
       </Routes>
       <Footer />
