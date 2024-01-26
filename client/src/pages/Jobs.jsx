@@ -343,8 +343,8 @@ Manager`,
             </span>
           </h1>
         </div>
-        <div>
-          <table className="mx-auto border-collapse border-2 border-gray-500 table-auto">
+        <div className="overflow-x-auto">
+          <table className="mx-auto border-collapse border-2 border-gray-500 table-auto ">
             <thead>
               <tr>
                 <th className="border border-gray-500 p-3">Country</th>
@@ -361,12 +361,12 @@ Manager`,
                   <td className="border border-gray-500 p-3 ">
                     {data.country}
                   </td>
-                  <td className="border border-gray-500 p-3">
+                  <td className="border border-gray-500 p-3 whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {data.company.map((company, idx) => (
                       <div key={idx}>{company.clients}</div>
                     ))}
                   </td>
-                  <td className="border border-gray-500 p-3">
+                  <td className="border border-gray-500 p-3 whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {data.company.map((company, idx) => (
                       <div key={idx}>
                         {company.jobs.map((job, ind) => (
@@ -377,7 +377,7 @@ Manager`,
                       </div>
                     ))}
                   </td>
-                  <td className="border border-gray-500 p-3">
+                  <td className="border border-gray-500 p-3 whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {data.company.map((company, idx) => (
                       <div key={idx}>
                         {company.jobs.map((job, ind) => (
@@ -398,64 +398,68 @@ Manager`,
       </div>
 
       <div className="max-w-4xl bg-slate-300 mx-auto">
-      <div >
         <div>
-          <h2 className="text-3xl font-semibold mt-5 md:mt-16">
-            <span className="text-red-700">OUR RECRUITING</span>{" "}
-            RESPONSIBILITIES
-          </h2>
+          <div>
+            <h2 className="text-3xl font-semibold mt-5 md:mt-16">
+              <span className="text-red-700">OUR RECRUITING</span>{" "}
+              RESPONSIBILITIES
+            </h2>
+          </div>
+          <div className="mx-3">
+            <p className="text-xl mt-5">
+              <span className="font-semibold ">LBN Key Resource (Pvt) Ltd</span>{" "}
+              will arrange for an interviews to select suitable candidates as
+              per the job order.
+            </p>
+          </div>
         </div>
-        <div className="mx-3">
-          <p className="text-xl mt-5">
-            <span className="font-semibold ">LBN Key Resource (Pvt) Ltd</span>{" "}
-            will arrange for an interviews to select suitable candidates as per
-            the job order.
-          </p>
-        </div>
-      </div>
 
-      <div className="max-w-4xl mx-auto">
-        <div>
-          <h2 className="text-3xl font-semibold mt-5 md:mt-16">
-            <span className="text-red-700">CLIENT'S </span>{" "}
-            RESPONSIBILITIES
-          </h2>
-        </div>
-        <div className="text-start mx-3">
-          <p className=" mt-5">
-          Client will arrange at their own expense selected candidates Visa, Health Card.
-Resident Permit, and any other local requirements as per the law of the Country.
-          </p><br />
-          <p>Client's representatives traveling to Sri Lanka for conducting interviews will bear
-their own cost of lodging and boarding. <span className="font-semibold">LBN Key Resource (Pvt) Ltd</span> will make the
-necessary hotel reservations and provide internal travel arrangements for
-interviews.</p>
+        <div className="max-w-4xl mx-auto">
+          <div>
+            <h2 className="text-3xl font-semibold mt-5 md:mt-16">
+              <span className="text-red-700">CLIENT'S </span> RESPONSIBILITIES
+            </h2>
+          </div>
+          <div className="text-start mx-3">
+            <p className=" mt-5">
+              Client will arrange at their own expense selected candidates Visa,
+              Health Card. Resident Permit, and any other local requirements as
+              per the law of the Country.
+            </p>
+            <br />
+            <p>
+              Client's representatives traveling to Sri Lanka for conducting
+              interviews will bear their own cost of lodging and boarding.{" "}
+              <span className="font-semibold">LBN Key Resource (Pvt) Ltd</span>{" "}
+              will make the necessary hotel reservations and provide internal
+              travel arrangements for interviews.
+            </p>
+          </div>
         </div>
       </div>
-      </div>
-
-      
 
       <div className="max-w-4xl mx-auto bg-slate-400">
         <div>
           <h2 className="text-center text-4xl font-semibold mt-5 md:mt-16">
-            <span className="text-red-700">RECRUITMENT</span>{" "}
-            PROCEDURE
+            <span className="text-red-700">RECRUITMENT</span> PROCEDURE
           </h2>
         </div>
         <div className="mx-3 ">
           <p className="text-xl mt-5">
-          In terms of Sri Lanka foreign Employment Law <span className="font-semibold">(Sri Lanka Bureau of Foreign Employment Act No, 21 of 1985)</span>,
-          </p><br />
-          <p>Foreign companies wishing to recruit Sri Lankan personnel are
-required to submit the following information and document to LBN
-Key Resource (Pvt) Ltd, by courier, Fax or E-mail.
-</p>
-        
+            In terms of Sri Lanka foreign Employment Law{" "}
+            <span className="font-semibold">
+              (Sri Lanka Bureau of Foreign Employment Act No, 21 of 1985)
+            </span>
+            ,
+          </p>
+          <br />
+          <p>
+            Foreign companies wishing to recruit Sri Lankan personnel are
+            required to submit the following information and document to LBN Key
+            Resource (Pvt) Ltd, by courier, Fax or E-mail.
+          </p>
         </div>
       </div>
-
-
     </div>
   );
 }
