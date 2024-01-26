@@ -59,7 +59,7 @@ export default function Vacancy() {
             </h1>
           </div>
           <div className="flex flex-col md:flex-row justify-center gap-10 items-start">
-            <div>
+            <div class="basis-2/4">
               <img src={vacancy.countryFlag} alt="country flag" className="" />
             </div>
             <div className="ml-3">

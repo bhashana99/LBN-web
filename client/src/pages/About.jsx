@@ -129,7 +129,7 @@ export default function About() {
   };
 
   return (
-    <div className="bg-white max-w-6xl  mx-auto w-full mb-10">
+    <div className=" max-w-6xl  mx-auto w-full mb-10">
       <div className=" ">
         {/* agency profile */}
         <div className="mt-10 md:mt-20 mx-3 md:mx-0">
