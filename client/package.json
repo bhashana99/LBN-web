@@ -23,6 +23,7 @@
     "react-router-dom": "^6.20.1",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.3.0",
+    "react-typed": "^2.0.12",
     "react-world-flags": "^1.6.0",
     "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
