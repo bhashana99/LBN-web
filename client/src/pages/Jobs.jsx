@@ -263,7 +263,7 @@ Manager`,
             </li>
             <li className="flex flex-row items-center gap-4">
               <Flag code={BAHARAIN} style={{ width: "50px", height: "auto" }} />
-              <p>BAHARAIN</p>
+              <p>BAHRAIN</p>
             </li>
             <li className="flex flex-row items-center gap-4">
               <Flag code={QATAR} style={{ width: "50px", height: "auto" }} />
