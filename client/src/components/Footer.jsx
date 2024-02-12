@@ -49,6 +49,9 @@ export default function Footer() {
                 <Link to="/jobs">Jobs</Link>
               </li>
               <li className="hover:underline hover:text-blue-900">
+                <Link to="/vacancies">Vacancies</Link>
+              </li>
+              <li className="hover:underline hover:text-blue-900">
                 <Link to="/about">About</Link>
               </li>
               <li className="hover:underline hover:text-blue-900">
@@ -62,10 +65,10 @@ export default function Footer() {
           <h1 className="text-2xl font-bold text-center">Contact Us</h1>
           <hr className="w-36 h-1 mx-auto my-1 bg-gray-100 border-0 rounded md:my-1 dark:bg-gray-700" />
           <div className="gird grid-row-2 ">
-            <div className="grid grid-rows-2 grid-flow-col gap-1">
+            <div className="flex flex-col md:grid md:grid-rows-2 md:grid-flow-col gap-1 ">
               <div className="flex flex-row gap-3 items-center mb-2">
                 <FaMapLocationDot className="text-2xl text-green-800" />
-                <div >
+                <div>
                   <p>No.250D/2, Pannipitiya Road,Thalawathugoda, </p>
                   <p>Sri Lanka.</p>
                 </div>
@@ -78,7 +81,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <MdEmail className="text-2xl text-green-800" />
-                <div >
+                <div>
                   <p>info@lbnkeyresource.com</p>
                   <p>lbnkeyresource99@gmail.com </p>
                 </div>
@@ -89,7 +92,7 @@ export default function Footer() {
               </div>
             </div>
             {/* social media */}
-            <div className=" mt-[-40px] flex  ">
+            <div className=" md:mt-[-40px] flex  ">
               <Link
                 to="https://www.facebook.com/LBNKEYRESOURCEPVTLTD?mibextid=ZbWKwL "
                 target="_blank"
