@@ -121,11 +121,11 @@ export default function Home() {
 
       <div className="my-10 max-w-7xl mx-auto">
         <div>
-          <h2 className="uppercase text-blue-500 text-3xl underline">
+          <h2 className="uppercase text-blue-500 text-3xl  font-mono">
             Latest vacancies
           </h2>
           <Link to="/vacancies">
-            <p>show more vacancies</p>
+            <p className="font-light hover:underline"> show more vacancies</p>
           </Link>
         </div>
         <div>

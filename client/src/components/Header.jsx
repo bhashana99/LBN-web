@@ -52,7 +52,7 @@ export default function Header() {
             className={`sm:inline ${
               isHomePage
                 ? "text-slate-600 text-2xl font-semibold "
-                : "text-slate-900"
+                : "text-slate-900 text-lg"
             }  hover:underline`}
           >
             <li>Home</li>
@@ -62,7 +62,7 @@ export default function Header() {
             className={`sm:inline ${
               isJobsPage
                 ? "text-slate-600 text-2xl font-semibold"
-                : "text-slate-900"
+                : "text-slate-900 text-lg"
             }  hover:underline`}
           >
             <li>Jobs</li>
@@ -72,7 +72,7 @@ export default function Header() {
             className={`sm:inline ${
               isVacanciesPage
                 ? "text-slate-600 text-2xl font-semibold"
-                : "text-slate-900"
+                : "text-slate-900 text-lg"
             }  hover:underline`}
           >
             <li>Vacancies</li>
@@ -82,7 +82,7 @@ export default function Header() {
             className={`sm:inline ${
               isAboutPage
                 ? "text-slate-600 text-2xl font-semibold"
-                : "text-slate-900"
+                : "text-slate-900 text-lg"
             }  hover:underline`}
           >
             <li>About</li>
@@ -92,7 +92,7 @@ export default function Header() {
             className={`sm:inline ${
               isContactPage
                 ? "text-slate-600 text-2xl font-semibold"
-                : "text-slate-900"
+                : "text-slate-900 text-lg"
             }  hover:underline`}
           >
             <li>Contact</li>
@@ -101,7 +101,7 @@ export default function Header() {
           {currentAdmin ? (
             <Link to="/profile">
               <img
-                className="rounded-full h-7 w-7 object-cover"
+                className="rounded-full h-9 w-9 object-cover"
                 src={currentAdmin.avatar}
                 alt="profile"
               />
