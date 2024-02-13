@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         {/* links */}
-        <div className="md:col-span-2 my-5">
+        <div className="md:col-span-2 mt-5">
           <h1 className="text-2xl font-bold  text-center">Our Links</h1>
           <hr className="w-36 h-1 mx-auto my-1  bg-gray-100 border-0 rounded md:my-1 dark:bg-gray-700" />
           <div className="flex flex-col  mt-2 items-center justify-start">
@@ -106,6 +106,19 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <hr className="h-1 bg-slate-300  " />
+      <div className="flex flex-row justify-between mx-5 py-2 ">
+        <p className="font-sans">
+          Copyright <span>&#169;</span> 2024 - LBN KEY RESOURCE (PVT) LTD - All
+          Rights Reserved
+        </p>
+        <p className="font-sans">
+          Designed & Developed by{" "}
+          <Link to="linkedin.com/in/bhashana-chamodya">
+            <span className="underline text-green-600">bhashana99</span>
+          </Link>
+        </p>
       </div>
     </footer>
   );
