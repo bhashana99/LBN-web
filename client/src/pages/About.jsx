@@ -92,7 +92,7 @@ export default function About() {
   In our 17 years of journey as a recruitment agency we have been
   dealing with the customers in Middle East, Eastern Europe and Asia.
   We have successfully worked to export professionals, skilled workers
-  and unskilled workers for Qatar, Saudi Arabia, Japan, Poland,
+  and unskilled workers for Japan, Lithuania, Qatar, Maldives,  Poland,
   Bahrain and UAE.`;
 
   const additionalMessage = `\n\n When we review our records for last 17 years we are proud to state
@@ -330,132 +330,132 @@ export default function About() {
       {/* CORPORATE INFORMATION */}
       <div className="max-w-4xl mx-auto poppins">
         <div className="uppercase flex justify-center agencyProfile text-3xl mt-10">
-        <FadeIn delay={0.2} direction="middle" padding fullWidth>
-          <h2 className="text-slate-950 font-bold text-center">
-            CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
-          </h2>
+          <FadeIn delay={0.2} direction="middle" padding fullWidth>
+            <h2 className="text-slate-950 font-bold text-center">
+              CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
+            </h2>
           </FadeIn>
         </div>
         <div className="flex flex-col md:flex-row m-5 items-center gap-6 mx-auto justify-center ">
           <div className="">
-          <FadeIn delay={0.2} direction="right" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            
-            <div className="flex flex-row gap-4 items-center">
-              <div>
-                <p>BUSINESS</p>
-                <p className="font-semibold ml-5 text-slate-600">
-                  LIMITED LIABILITY COMPANY
-                </p>
+            <FadeIn delay={0.2} direction="right" padding fullWidth>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+
+              <div className="flex flex-row gap-4 items-center">
+                <div>
+                  <p>BUSINESS</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    LIMITED LIABILITY COMPANY
+                  </p>
+                </div>
               </div>
-            </div>
             </FadeIn>
             <FadeIn delay={0.3} direction="right" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            <div className="flex flex-row gap-4 items-center">
-              <div>
-                <p>NAME</p>
-                <p className="font-semibold ml-5 text-slate-600">
-                  LBN KEY RESOURCE (PVT) LTD
-                </p>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+              <div className="flex flex-row gap-4 items-center">
+                <div>
+                  <p>NAME</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    LBN KEY RESOURCE (PVT) LTD
+                  </p>
+                </div>
               </div>
-            </div>
             </FadeIn>
             <FadeIn delay={0.4} direction="right" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            <div className="flex flex-row gap-4 items-center ">
-              <div>
-                <p className="bg-rose-200">COMPANY REGISTRATION NUMBER</p>
-                <p className="font-semibold ml-5 text-slate-600">
-                  P V 00214762
-                </p>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+              <div className="flex flex-row gap-4 items-center ">
+                <div>
+                  <p className="bg-rose-200">COMPANY REGISTRATION NUMBER</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    P V 00214762
+                  </p>
+                </div>
               </div>
-            </div>
             </FadeIn>
             <FadeIn delay={0.5} direction="right" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            <div className="flex flex-row gap-4 items-center">
-              <div>
-                <p>OBJECT</p>
-                <p className="font-bold ml-5 text-slate-600">
-                  RECRUITER OF MAN POWER FOR <br />
-                  OVERSEAS MARKET
-                </p>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+              <div className="flex flex-row gap-4 items-center">
+                <div>
+                  <p>OBJECT</p>
+                  <p className="font-bold ml-5 text-slate-600">
+                    RECRUITER OF MAN POWER FOR <br />
+                    OVERSEAS MARKET
+                  </p>
+                </div>
               </div>
-            </div>
             </FadeIn>
             <FadeIn delay={0.6} direction="right" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            <div className="flex flex-row gap-4 items-center">
-              <div>
-                <p>ACCREDITATION</p>
-                <p className="font-bold ml-5 text-red-600">LICENSE NO: 2227</p>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+              <div className="flex flex-row gap-4 items-center">
+                <div>
+                  <p>ACCREDITATION</p>
+                  <p className="font-bold ml-5 text-red-600">
+                    LICENSE NO: 2227
+                  </p>
+                </div>
               </div>
-            </div>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2 hidden md:flex" />
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2 hidden md:flex" />
             </FadeIn>
           </div>
 
           <div>
-          <FadeIn delay={0.2} direction="left" padding fullWidth>
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            <h4 className="text-center  my-4">Bank Details</h4>
+            <FadeIn delay={0.2} direction="left" padding fullWidth>
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+              <h4 className="text-center  my-4">Bank Details</h4>
             </FadeIn>
             <FadeIn delay={0.3} direction="left" padding fullWidth>
-            <div className="flex flex-row gap-4 items-center my-2">
-              <div>
-                <p>
-                BANKERS
-                </p>
-                <p className="font-semibold ml-5 text-slate-600">NDB BANK-MALABE BRANCH</p>
+              <div className="flex flex-row gap-4 items-center my-2">
+                <div>
+                  <p>BANKERS</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    NDB BANK-MALABE BRANCH
+                  </p>
+                </div>
               </div>
-            </div>
-            <hr />
+              <hr />
             </FadeIn>
             <FadeIn delay={0.4} direction="left" padding fullWidth>
-            <div className="flex flex-row gap-4 items-center my-2">
-              <div>
-                <p>
-                ACCOUNT NAME
-                </p>
-                <p className="font-semibold ml-5 text-slate-600">LBN KEY RESOURCE (PVT) LTD</p>
+              <div className="flex flex-row gap-4 items-center my-2">
+                <div>
+                  <p>ACCOUNT NAME</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    LBN KEY RESOURCE (PVT) LTD
+                  </p>
+                </div>
               </div>
-            </div>
-            <hr />
+              <hr />
             </FadeIn>
             <FadeIn delay={0.3} direction="left" padding fullWidth>
-            <div className="flex flex-row gap-4 items-center  my-2">
-              <div>
-                <p>
-                ACCOUNT NO
-                </p>
-                <p className="font-semibold ml-5 text-slate-600">101000865835</p>
+              <div className="flex flex-row gap-4 items-center  my-2">
+                <div>
+                  <p>ACCOUNT NO</p>
+                  <p className="font-semibold ml-5 text-slate-600">
+                    101000865835
+                  </p>
+                </div>
               </div>
-            </div>
-            <hr />
+              <hr />
             </FadeIn>
             <FadeIn delay={0.4} direction="up" padding fullWidth>
-            <div className="flex flex-row gap-4 items-center my-2">
-              <div className="flex flex-row gap-4 text-center justify-center ">
-                <div>
-                  <p>BANK CODE</p>
-                  <p className="font-semibold  text-slate-600">7214</p>
-                </div>
-                <div>
-                  <p>BRANCH CODE</p>
-                  <p className="font-semibold  text-slate-600">31</p>
+              <div className="flex flex-row gap-4 items-center my-2">
+                <div className="flex flex-row gap-4 text-center justify-center ">
+                  <div>
+                    <p>BANK CODE</p>
+                    <p className="font-semibold  text-slate-600">7214</p>
+                  </div>
+                  <div>
+                    <p>BRANCH CODE</p>
+                    <p className="font-semibold  text-slate-600">31</p>
+                  </div>
                 </div>
               </div>
-             
-            </div>
-            <div className="text-center">
+              <div className="text-center">
                 <p>SWIFT CODE</p>
                 <p className="font-semib text-slate-600">NDBSLKLX</p>
               </div>
-            
-            <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
+
+              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
             </FadeIn>
-            
           </div>
         </div>
       </div>

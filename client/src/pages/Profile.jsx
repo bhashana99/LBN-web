@@ -165,13 +165,13 @@ export default function Profile() {
           onChange={handleChange}
         />
 
-        <input
+        {/* <input
           type="text"
           placeholder="password"
           className="border p-3 rounded-lg"
           id="password"
           onChange={handleChange}
-        />
+        /> */}
         <button disabled={loading} className="bg-slate-700 text-white uppercase rounded-lg p-3 hover:opacity-95">
         {loading ? "Loading..." : "Update"}
         </button>
