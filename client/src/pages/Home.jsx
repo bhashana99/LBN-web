@@ -76,7 +76,7 @@ export default function Home() {
       <FadeIn delay={0.2} direction="middle" padding fullWidth>
         <div className="my-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-4 ">
           <div>
-            <h1 className="text-4xl font-light uppercase font-mono mb-5 text-center md:text-start">
+            <h1 className="text-2xl md:text-4xl font-light uppercase font-mono mb-5 text-center md:text-start">
               Welcome to{" "}
               <span className="text-green-400 font-bold">
                 LBN Key Resource (Pvt) Ltd
