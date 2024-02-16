@@ -13,7 +13,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-300 pb-3 md:pb-0 relative left-0 right-0 bottom-0 shadow-md">
+    <footer className="bg-red-300 pb-3 md:pb-0 relative left-0 right-0 bottom-0 shadow-md">
       <div className="flex flex-col mx-5 md:grid  md:grid-cols-8  md:gap-2 md:mx-10  md:p-10">
         {/* logo */}
         <div className=" md:col-span-3 ">
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <hr className="h-1 bg-slate-300  " />
+      <hr className="h-1 bg-red-400  " />
       <div className="flex flex-row justify-between mx-5 py-2 ">
         <p className="font-sans">
           Copyright <span>&#169;</span> 2024 - LBN KEY RESOURCE (PVT) LTD - All
