@@ -47,7 +47,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-w-full">
+    <div className="min-w-full bg-rose-50">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
@@ -119,9 +119,9 @@ export default function Home() {
         </div>
       </FadeIn>
 
-      <div className="my-10 max-w-7xl mx-auto">
+      <div className="my-10 max-w-7xl mx-5 md:mx-auto">
         <div>
-          <h2 className="uppercase text-blue-500 text-3xl  font-mono">
+          <h2 className="uppercase text-blue-500 text-xl md:text-3xl  font-mono">
             Latest vacancies
           </h2>
           <Link to="/vacancies">
@@ -134,7 +134,7 @@ export default function Home() {
               {showVacancy.slice(0, 3).map((vacancy) => (
                 <div
                   key={vacancy._id}
-                  className="flex flex-col gap-5 border-solid border-2 border-slate-200 mb-4 shadow-2xl md:shadow-lg hover:shadow-2xl w-full md:w-96 hover:scale-95"
+                  className="flex flex-col gap-5 border-solid border-2 border-slate-200 bg-white mb-4 shadow-2xl md:shadow-lg hover:shadow-2xl w-full md:w-96 hover:scale-95"
                 >
                   <div className="basis-1/4">
                     <img
