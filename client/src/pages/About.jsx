@@ -129,333 +129,343 @@ export default function About() {
   };
 
   return (
-    <div className=" max-w-6xl  mx-auto w-full mb-10">
-      <div className=" ">
-        {/* agency profile */}
-        <div className="mt-10 md:mt-20 mx-3 md:mx-0">
-          <div className="uppercase  flex justify-center poppins text-4xl">
-            <FadeIn delay={0.2} direction="down" padding fullWidth>
-              <h1 className="font-semibold text-center">
-                <span className="text-red-700 ">Agency</span> Profile
-              </h1>
+    <div className="bg-rose-50">
+      <div className=" max-w-6xl  mx-auto w-full pb-10">
+        <div className=" ">
+          {/* agency profile */}
+          <div className="pt-10 pd:mt-20 mx-3 md:mx-0">
+            <div className="uppercase  flex justify-center poppins text-xl md:text-4xl">
+              <FadeIn delay={0.2} direction="down" padding fullWidth>
+                <h1 className="font-semibold text-center">
+                  <span className="text-red-700 ">Agency</span> Profile
+                </h1>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.5} direction="middle" padding fullWidth>
+              <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
+                <p className="font-light">
+                  <span className="font-semibold  text-slate-900">
+                    LBN Key Resource (Pvt) Ltd
+                  </span>{" "}
+                  was established in 2006, with an experienced staff in the
+                  recruiting field and has earned a prestigious name both in Sri
+                  Lanka and abroad and absolutely clean, transparent and high
+                  professionalism in manpower recruitment field.
+                </p>
+              </div>
             </FadeIn>
           </div>
-          <FadeIn delay={0.5} direction="middle" padding fullWidth>
-            <div className="max-w-4xl mx-auto text-center bg-slate-300 mt-5 p-4 rounded-lg agencyProfileText font-mono">
-              <p className="font-light">
-                <span className="font-semibold  text-slate-900">
-                  LBN Key Resource (Pvt) Ltd
-                </span>{" "}
-                was established in 2006, with an experienced staff in the
-                recruiting field and has earned a prestigious name both in Sri
-                Lanka and abroad and absolutely clean, transparent and high
-                professionalism in manpower recruitment field.
-              </p>
+
+          {/* INTRODUCTION */}
+          <div className="mt-10 max-w-4xl mx-auto">
+            <div className="flex justify-center poppins">
+              <FadeIn delay={0.4} direction="middle" padding fullWidth>
+                <h1 className="uppercase my-2 md:my-5 text-xl md:text-4xl font-semibold ">
+                  INTRODUCTION
+                </h1>
+              </FadeIn>
             </div>
-          </FadeIn>
+            <div className="grid grid-cols-3 gap-2 md:gap-4">
+              <div className="col-span-3 md:col-span-1">
+                <FadeIn delay={0.4} direction="right" padding fullWidth>
+                  <img src={logo} alt="" className=" h-32 md:h-64" />
+                </FadeIn>
+              </div>
+
+              <div className="col-span-3 md:col-span-2">
+                <ul className="list-disc ">
+                  <FadeIn delay={0.4} direction="left" padding fullWidth>
+                    <li className="mb-3">
+                      <p>
+                        <span className="font-semibold">
+                          LBN Key Resource (Pvt) Ltd
+                        </span>{" "}
+                        is an authorized employment agency, approved by the
+                        bureau of foreign employment of Sri Lanka to act as an
+                        agent for foreign principals in recruiting and supplying
+                        personnel for all categories of foreign employment.
+                      </p>
+                    </li>
+                  </FadeIn>
+                  <FadeIn delay={0.5} direction="left" padding fullWidth>
+                    <li>
+                      <p>
+                        <span className="font-semibold">
+                          LBN Key Resource (Pvt) Ltd
+                        </span>{" "}
+                        was established in 2006 by a team of young experienced
+                        staff with and initial investment of Rs.2 Million. It
+                        has gained recognition in Sri Lanka as a one of the
+                        market leaders in the field of foreign employment.
+                      </p>
+                    </li>
+                  </FadeIn>
+                  <FadeIn delay={0.8} direction="left" padding fullWidth>
+                    <li>
+                      The <span className="font-semibold">main business</span>{" "}
+                      of LBN Key Resource (Pvt) Ltd consists of supplying of
+                      professionals, technical, skilled and unskilled man power
+                      to foreign principals, ticketing and travel agent.
+                    </li>
+                  </FadeIn>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* INTRODUCTION */}
-        <div className="mt-10 max-w-4xl mx-auto">
-          <div className="flex justify-center poppins">
-            <FadeIn delay={0.4} direction="middle" padding fullWidth>
-              <h1 className="uppercase  my-5 text-4xl font-semibold ">
-                INTRODUCTION
-              </h1>
+        {/* vision and mission */}
+
+        <div className="mt-16 md:mt-24 grid grid-cols-1   md:grid-cols-2 gap-4 max-w-4xl mx-3 md:mx-auto vision ">
+          <div className="w-full py-[1rem] px-4 bg-amber-200 rounded-lg shadow-lg hover:scale-95">
+            <img
+              src={vision}
+              alt=""
+              className="w-10 md:w-20 mx-auto mt-[-2rem]  md:mt-[-3rem] "
+            />
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-center py-4 uppercase text-sky-950">
+                Vision
+              </h2>
+              <p className="text-center text-xl md:text-3xl  font-light">
+                <span className="text-xl md:text-4xl font-bold">“</span>We want
+                to be the best choice for human resources for overseas market.{" "}
+                <span className="text-xl md:text-4xl font-semibold">”</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full py-4 md:py-[1rem] px-4  bg-green-200 rounded-lg shadow-lg md:mt-0 mt-4 hover:scale-95 ">
+            <img
+              src={mission}
+              alt=""
+              className="w-10 md:w-20 mx-auto mt-[-2rem]  md:mt-[-3rem] "
+            />
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-center py-4 text-sky-950 uppercase">
+                Mission
+              </h2>
+              <p className="text-center text-lg md:text-xl font-light">
+                <span className="text-lg md:text-2xl font-bold">“</span>To make
+                efficient and equitable pathways for professionals, skilled and
+                unskilled people to benefit in overseas employment markets
+                securing interests of both employer and employee.
+                <span className="text-lg md:text-2xl font-bold">”</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* director message */}
+        <FadeIn delay={0.2} direction="middle" padding fullWidth>
+          <div className="mt-20 mx-3 md:mx-auto ">
+            <div className="uppercase  flex justify-center poppins text-xl md:text-3xl ">
+              <h2 className="text-slate-950 font-bold  mb-10">
+                DIRECTOR’S MESSAGE
+              </h2>
+            </div>
+
+            <div className="w-full max-w-4xl mx-auto ">
+              <img
+                src={director}
+                className="max-h-40 md:max-h-80 float-left pr-5"
+                alt="director image"
+              />
+
+              <p className="text-justify roboto">
+                {showFullMessage
+                  ? fullMessage.split("\n\n").map((paragraph, index) => (
+                      <React.Fragment key={index}>
+                        {paragraph}
+                        <br />
+                      </React.Fragment>
+                    ))
+                  : initialMessage.split("\n\n").map((paragraph, index) => (
+                      <React.Fragment key={index}>
+                        {paragraph}
+                        <br />
+                        <br />
+                      </React.Fragment>
+                    ))}
+                {showFullMessage && (
+                  <span
+                    className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                    onClick={toggleMessage}
+                  >
+                    Show Less..
+                  </span>
+                )}
+                {!showFullMessage && (
+                  <span
+                    className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
+                    onClick={toggleMessage}
+                  >
+                    Read More..
+                  </span>
+                )}
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* our team */}
+
+        <div className="max-w-4xl mx-auto poppins">
+          <div className="uppercase  flex justify-center agencyProfile text-xl md:text-3xl mt-20">
+            <h2 className="text-slate-950 font-bold">Our Team</h2>
+          </div>
+          <div className=" pb-10 ">
+            <div className="w-4/5 md:w-full m-auto">
+              <div className="mt-10  ">
+                <Slider {...settings}>
+                  {teamData.map((d) => (
+                    <div className="bg-blue-100 h-[150px] px-5 rounded-xl shadow-2xl hover:scale-95 hover:shadow-none flex justify-center items-center ">
+                      <div className="flex flex-col justify-center items-center text-center ">
+                        <h3 className="text-lg md:text-xl font-semibold mb-2 md:my-5 text-slate-900">
+                          {d.designation}
+                        </h3>
+                        <p className="text-semibold font-normal text-blue-900 ">
+                          {d.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CORPORATE INFORMATION */}
+        <div className="max-w-4xl mx-auto poppins">
+          <div className="uppercase flex justify-center agencyProfile text-xl md:text-3xl mt-10">
+            <FadeIn delay={0.2} direction="middle" padding fullWidth>
+              <h2 className="text-slate-950 font-bold text-center">
+                CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
+              </h2>
             </FadeIn>
           </div>
-          <div className="grid grid-cols-3 gap-2 md:gap-4">
-            <div className="col-span-3 md:col-span-1">
+          <div className="flex flex-col md:flex-row m-5 items-center gap-6 mx-auto justify-center ">
+            <div className="">
+              <FadeIn delay={0.2} direction="right" padding fullWidth>
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+
+                <div className="flex flex-row gap-1 md:gap-4 items-center">
+                  <div>
+                    <p>BUSINESS</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      LIMITED LIABILITY COMPANY
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.3} direction="right" padding fullWidth>
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+                <div className="flex flex-row gap-4 items-center">
+                  <div>
+                    <p>NAME</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      LBN KEY RESOURCE (PVT) LTD
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
               <FadeIn delay={0.4} direction="right" padding fullWidth>
-                <img src={logo} alt="" className=" h-32 md:h-64" />
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+                <div className="flex flex-row gap-4 items-center ">
+                  <div>
+                    <p className="bg-rose-200">COMPANY REGISTRATION NUMBER</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      P V 00214762
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.5} direction="right" padding fullWidth>
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+                <div className="flex flex-row gap-4 items-center">
+                  <div>
+                    <p>OBJECT</p>
+                    <p className="font-bold ml-5 text-slate-600">
+                      RECRUITER OF MAN POWER FOR <br />
+                      OVERSEAS MARKET
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.6} direction="right" padding fullWidth>
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+                <div className="flex flex-row gap-4 items-center">
+                  <div>
+                    <p>ACCREDITATION</p>
+                    <p className="font-bold ml-5 text-red-600">
+                      LICENSE NO: 2227
+                    </p>
+                  </div>
+                </div>
+                <hr className="bg-white border-0 rounded h-1 my-2 hidden md:flex" />
               </FadeIn>
             </div>
 
-            <div className="col-span-3 md:col-span-2">
-              <ul className="list-disc ">
-                <FadeIn delay={0.4} direction="left" padding fullWidth>
-                  <li className="mb-3">
-                    <p>
-                      <span className="font-semibold">
-                        LBN Key Resource (Pvt) Ltd
-                      </span>{" "}
-                      is an authorized employment agency, approved by the bureau
-                      of foreign employment of Sri Lanka to act as an agent for
-                      foreign principals in recruiting and supplying personnel
-                      for all categories of foreign employment.
+            <div>
+              <FadeIn delay={0.2} direction="left" padding fullWidth>
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+                <h4 className="text-center  my-4">Bank Details</h4>
+              </FadeIn>
+              <FadeIn delay={0.3} direction="left" padding fullWidth>
+                <div className="flex flex-row gap-4 items-center my-2">
+                  <div>
+                    <p>BANKERS</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      NDB BANK-MALABE BRANCH
                     </p>
-                  </li>
-                </FadeIn>
-                <FadeIn delay={0.5} direction="left" padding fullWidth>
-                  <li>
-                    <p>
-                      <span className="font-semibold">
-                        LBN Key Resource (Pvt) Ltd
-                      </span>{" "}
-                      was established in 2006 by a team of young experienced
-                      staff with and initial investment of Rs.2 Million. It has
-                      gained recognition in Sri Lanka as a one of the market
-                      leaders in the field of foreign employment.
+                  </div>
+                </div>
+                <hr />
+              </FadeIn>
+              <FadeIn delay={0.4} direction="left" padding fullWidth>
+                <div className="flex flex-row gap-4 items-center my-2">
+                  <div>
+                    <p>ACCOUNT NAME</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      LBN KEY RESOURCE (PVT) LTD
                     </p>
-                  </li>
-                </FadeIn>
-                <FadeIn delay={0.8} direction="left" padding fullWidth>
-                  <li>
-                    The <span className="font-semibold">main business</span> of
-                    LBN Key Resource (Pvt) Ltd consists of supplying of
-                    professionals, technical, skilled and unskilled man power to
-                    foreign principals, ticketing and travel agent.
-                  </li>
-                </FadeIn>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* vision and mission */}
-
-      <div className="mt-16 md:mt-24 grid grid-cols-1   md:grid-cols-2 gap-4 max-w-4xl mx-3 md:mx-auto vision ">
-        <div className="w-full py-[1rem] px-4 bg-amber-200 rounded-lg shadow-lg hover:scale-95">
-          <img src={vision} alt="" className="w-20 mx-auto mt-[-3rem] " />
-          <div>
-            <h2 className="text-2xl font-bold text-center py-4 uppercase text-sky-950">
-              Vision
-            </h2>
-            <p className="text-center text-3xl  font-light">
-              <span className="text-4xl font-bold">“</span>We want to be the
-              best choice for human resources for overseas market.{" "}
-              <span className="text-4xl font-semibold">”</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="w-full py-4 md:py-[1rem] px-4  bg-green-200 rounded-lg shadow-lg md:mt-0 mt-4 hover:scale-95 ">
-          <img src={mission} alt="" className="w-20 mx-auto mt-[-3rem] " />
-          <div>
-            <h2 className="text-2xl font-bold text-center py-4 text-sky-950 uppercase">
-              Mission
-            </h2>
-            <p className="text-center text-xl font-light">
-              <span className="text-2xl font-bold">“</span>To make efficient and
-              equitable pathways for professionals, skilled and unskilled people
-              to benefit in overseas employment markets securing interests of
-              both employer and employee.
-              <span className="text-2xl font-bold">”</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* director message */}
-      <FadeIn delay={0.2} direction="middle" padding fullWidth>
-        <div className="mt-20 mx-3 md:mx-auto ">
-          <div className="uppercase  flex justify-center poppins text-3xl ">
-            <h2 className="text-slate-950 font-bold  mb-10">
-              DIRECTOR’S MESSAGE
-            </h2>
-          </div>
-
-          <div className="w-full max-w-4xl mx-auto ">
-            <img
-              src={director}
-              className="max-h-48 md:max-h-80 float-left pr-5"
-              alt="director image"
-            />
-
-            <p className="text-justify roboto">
-              {showFullMessage
-                ? fullMessage.split("\n\n").map((paragraph, index) => (
-                    <React.Fragment key={index}>
-                      {paragraph}
-                      <br />
-                    </React.Fragment>
-                  ))
-                : initialMessage.split("\n\n").map((paragraph, index) => (
-                    <React.Fragment key={index}>
-                      {paragraph}
-                      <br />
-                      <br />
-                    </React.Fragment>
-                  ))}
-              {showFullMessage && (
-                <span
-                  className="cursor-pointer flex justify-center rounded-lg text-blue-600 hover:underline hover:opacity-95"
-                  onClick={toggleMessage}
-                >
-                  Show Less..
-                </span>
-              )}
-              {!showFullMessage && (
-                <span
-                  className=" cursor-pointer flex justify-center  rounded-lg text-blue-600 hover:underline hover:opacity-95"
-                  onClick={toggleMessage}
-                >
-                  Read More..
-                </span>
-              )}
-            </p>
-          </div>
-        </div>
-      </FadeIn>
-
-      {/* our team */}
-
-      <div className="max-w-4xl mx-auto poppins">
-        <div className="uppercase  flex justify-center agencyProfile text-3xl mt-20">
-          <h2 className="text-slate-950 font-bold">Our Team</h2>
-        </div>
-        <div className=" pb-10 ">
-          <div className="w-4/5 md:w-full m-auto">
-            <div className="mt-10  ">
-              <Slider {...settings}>
-                {teamData.map((d) => (
-                  <div className="bg-blue-100 h-[150px] px-5 rounded-xl shadow-2xl hover:scale-95 hover:shadow-none flex justify-center items-center ">
-                    <div className="flex flex-col justify-center items-center text-center ">
-                      <h3 className="text-xl font-semibold mb-2 md:my-5 text-slate-900">
-                        {d.designation}
-                      </h3>
-                      <p className="text-semibold font-normal text-blue-900 ">
-                        {d.name}
-                      </p>
+                  </div>
+                </div>
+                <hr />
+              </FadeIn>
+              <FadeIn delay={0.3} direction="left" padding fullWidth>
+                <div className="flex flex-row gap-4 items-center  my-2">
+                  <div>
+                    <p>ACCOUNT NO</p>
+                    <p className="font-semibold ml-5 text-slate-600">
+                      101000865835
+                    </p>
+                  </div>
+                </div>
+                <hr />
+              </FadeIn>
+              <FadeIn delay={0.4} direction="up" padding fullWidth>
+                <div className="flex flex-row gap-1 md:gap-4 items-center my-2">
+                  <div className="flex flex-row gap-4 text-center justify-center ">
+                    <div>
+                      <p>BANK CODE</p>
+                      <p className="font-semibold  text-slate-600">7214</p>
+                    </div>
+                    <div>
+                      <p>BRANCH CODE</p>
+                      <p className="font-semibold  text-slate-600">31</p>
                     </div>
                   </div>
-                ))}
-              </Slider>
+                </div>
+                <div className="text-center">
+                  <p>SWIFT CODE</p>
+                  <p className="font-semib text-slate-600">NDBSLKLX</p>
+                </div>
+
+                <hr className="bg-white border-0 rounded h-1 my-2" />
+              </FadeIn>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CORPORATE INFORMATION */}
-      <div className="max-w-4xl mx-auto poppins">
-        <div className="uppercase flex justify-center agencyProfile text-3xl mt-10">
-          <FadeIn delay={0.2} direction="middle" padding fullWidth>
-            <h2 className="text-slate-950 font-bold text-center">
-              CORPORATE <span className="text-red-500">INFORMATION</span>{" "}
-            </h2>
-          </FadeIn>
-        </div>
-        <div className="flex flex-col md:flex-row m-5 items-center gap-6 mx-auto justify-center ">
-          <div className="">
-            <FadeIn delay={0.2} direction="right" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-
-              <div className="flex flex-row gap-4 items-center">
-                <div>
-                  <p>BUSINESS</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    LIMITED LIABILITY COMPANY
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.3} direction="right" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-              <div className="flex flex-row gap-4 items-center">
-                <div>
-                  <p>NAME</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    LBN KEY RESOURCE (PVT) LTD
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.4} direction="right" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-              <div className="flex flex-row gap-4 items-center ">
-                <div>
-                  <p className="bg-rose-200">COMPANY REGISTRATION NUMBER</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    P V 00214762
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.5} direction="right" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-              <div className="flex flex-row gap-4 items-center">
-                <div>
-                  <p>OBJECT</p>
-                  <p className="font-bold ml-5 text-slate-600">
-                    RECRUITER OF MAN POWER FOR <br />
-                    OVERSEAS MARKET
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.6} direction="right" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-              <div className="flex flex-row gap-4 items-center">
-                <div>
-                  <p>ACCREDITATION</p>
-                  <p className="font-bold ml-5 text-red-600">
-                    LICENSE NO: 2227
-                  </p>
-                </div>
-              </div>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2 hidden md:flex" />
-            </FadeIn>
-          </div>
-
-          <div>
-            <FadeIn delay={0.2} direction="left" padding fullWidth>
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-              <h4 className="text-center  my-4">Bank Details</h4>
-            </FadeIn>
-            <FadeIn delay={0.3} direction="left" padding fullWidth>
-              <div className="flex flex-row gap-4 items-center my-2">
-                <div>
-                  <p>BANKERS</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    NDB BANK-MALABE BRANCH
-                  </p>
-                </div>
-              </div>
-              <hr />
-            </FadeIn>
-            <FadeIn delay={0.4} direction="left" padding fullWidth>
-              <div className="flex flex-row gap-4 items-center my-2">
-                <div>
-                  <p>ACCOUNT NAME</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    LBN KEY RESOURCE (PVT) LTD
-                  </p>
-                </div>
-              </div>
-              <hr />
-            </FadeIn>
-            <FadeIn delay={0.3} direction="left" padding fullWidth>
-              <div className="flex flex-row gap-4 items-center  my-2">
-                <div>
-                  <p>ACCOUNT NO</p>
-                  <p className="font-semibold ml-5 text-slate-600">
-                    101000865835
-                  </p>
-                </div>
-              </div>
-              <hr />
-            </FadeIn>
-            <FadeIn delay={0.4} direction="up" padding fullWidth>
-              <div className="flex flex-row gap-4 items-center my-2">
-                <div className="flex flex-row gap-4 text-center justify-center ">
-                  <div>
-                    <p>BANK CODE</p>
-                    <p className="font-semibold  text-slate-600">7214</p>
-                  </div>
-                  <div>
-                    <p>BRANCH CODE</p>
-                    <p className="font-semibold  text-slate-600">31</p>
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <p>SWIFT CODE</p>
-                <p className="font-semib text-slate-600">NDBSLKLX</p>
-              </div>
-
-              <hr className="bg-gray-100 border-0 rounded h-1 my-2" />
-            </FadeIn>
           </div>
         </div>
       </div>
