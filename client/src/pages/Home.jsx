@@ -74,7 +74,7 @@ export default function Home() {
         ))}
       </Swiper>
       <FadeIn delay={0.2} direction="middle" padding fullWidth>
-        <div className="my-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-4 ">
+        <div className="mt-5 md:mt-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-4 ">
           <div>
             <h1 className="text-2xl md:text-4xl font-light uppercase font-mono mb-5 text-center md:text-start">
               Welcome to{" "}
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </FadeIn>
 
-      <div className="my-10 max-w-7xl mx-5 md:mx-auto">
+      <div className="mt-5 md:mt-10 max-w-7xl mx-5 md:mx-auto">
         <div>
           <h2 className="uppercase text-blue-500 text-xl md:text-3xl  font-mono">
             Latest vacancies
@@ -145,14 +145,14 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col gap-3 basis-2/4 ml-3 md:ml-0 ">
                     <div className="md:ml-3">
-                      <h3 className="font-semibold mt-2 text-2xl">
+                      <h3 className="font-semibold mt-1 md:mt-2 text-2xl">
                         {vacancy.title}
                       </h3>
                     </div>
                     <div className="md:ml-3">
                       <p>{vacancy.description}</p>
                     </div>
-                    <div className="mt-2 md:ml-3">
+                    <div className="mt-1 md:mt-2 md:ml-3">
                       <p className="text-green-800 font-bold">
                         {vacancy.salary}
                       </p>
