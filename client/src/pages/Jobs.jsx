@@ -256,8 +256,8 @@ Manager`,
               <br /> WITH OUR CLIENT BASE
             </h4>
           </div>
-          <div className=" mx-5 p-5 mt-5">
-            <ul className="flex flex-col gap-5  md:flex-row justify-between">
+          <div className="mx-5 p-5 mt-5">
+            <ul className="flex flex-col gap-5  md:flex-row  md:justify-between">
               <li className="flex  flex-row items-center gap-4 ">
                 <Flag code={JAPAN} style={{ width: "50px", height: "auto" }} />
                 <p>Japan</p>
@@ -293,7 +293,7 @@ Manager`,
         </div>
         <div>
           <div>
-            <h4 className="text-center text-4xl font-semibold mt-10 mb-5">
+            <h4 className="text-center text-xl md:text-4xl font-semibold mt-10 mb-5">
               CATEGORY OF WORKERS
             </h4>
           </div>
@@ -317,7 +317,7 @@ Manager`,
             {selectedJob === job.id && (
               <FadeIn delay={0.3} direction="middle" padding fullWidth>
                 <div>
-                  <h3 className="text-3xl">
+                  <h3 className="text-xl md:text-3xl">
                     <span className="text-red-700">{job.title} </span>
                   </h3>
                   <hr className="bg-rose-200  border-0 rounded h-1 my-2 w-1/4" />
@@ -343,7 +343,7 @@ Manager`,
         {/* pipeline */}
         <div>
           <div>
-            <h1 className="text-center text-4xl font-semibold mt-10 mb-5">
+            <h1 className="text-center text-xl md:text-4xl  font-semibold mt-10 mb-5">
               PROJECTS IN PIPELINE <br />{" "}
               <span className="text-red-700 text-sm ">
                 (FOR THE YEAR 2023 / 2024)
@@ -407,13 +407,13 @@ Manager`,
         <div className="max-w-4xl  mx-auto">
           <div>
             <div>
-              <h2 className="text-3xl font-semibold mt-5 md:mt-16">
+              <h2 className="text-xl md:text-3xl font-semibold mt-5 md:mt-16 ml-5 md:ml-0">
                 <span className="text-red-700">OUR RECRUITING</span>{" "}
                 RESPONSIBILITIES
               </h2>
             </div>
             <div className="mx-3">
-              <p className="text-xl mt-5">
+              <p className="text-lg md:text-xl mt-5">
                 <span className="font-semibold ">
                   LBN Key Resource (Pvt) Ltd
                 </span>{" "}
@@ -425,7 +425,7 @@ Manager`,
 
           <div className="max-w-4xl mx-auto">
             <div>
-              <h2 className="text-3xl font-semibold mt-5 md:mt-16">
+              <h2 className="text-xl md:text-3xl font-semibold mt-5 md:mt-16 ml-5 md:ml-0">
                 <span className="text-red-700">CLIENT'S </span> RESPONSIBILITIES
               </h2>
             </div>
@@ -451,12 +451,12 @@ Manager`,
 
         <div className="max-w-4xl mx-auto ">
           <div>
-            <h2 className="text-center text-4xl font-semibold mt-5 md:mt-16">
+            <h2 className="text-center text-xl md:text-4xl  font-semibold mt-5 md:mt-16">
               <span className="text-red-700">RECRUITMENT</span> PROCEDURE
             </h2>
           </div>
           <div className="mx-3 ">
-            <p className="text-xl mt-5">
+            <p className="text-lg md:text-xl mt-5">
               In terms of Sri Lanka foreign Employment Law{" "}
               <span className="font-semibold">
                 (Sri Lanka Bureau of Foreign Employment Act No, 21 of 1985)
