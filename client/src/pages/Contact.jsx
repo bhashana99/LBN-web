@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import FadeIn from "../components/FadeIn";
 import contactImg from "../assets/images/contactImg.png";
 import { Link } from "react-router-dom";
@@ -14,6 +14,24 @@ import { IoIosCall, IoIosMail } from "react-icons/io";
 import { CiClock2 } from "react-icons/ci";
 import { FaSquareXTwitter } from "react-icons/fa6";
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    };
   return (
     <div className="max-w-6xl mx-auto w-full  poppins mt-5 md:mt-10 ">
       <FadeIn delay={0.2} direction="middle" padding fullWidth>
@@ -166,7 +184,6 @@ export default function Contact() {
           </div>
           <div>
             <iframe
-            
               width="520"
               height="400"
               frameborder="0"
@@ -182,6 +199,40 @@ export default function Contact() {
           </div>
         </div>
       </FadeIn>
+
+      {/* contact form */}
+      <div className="flex flex-col max-w-3xl mx-5 md:mx-auto ">
+        <div >
+          <h2 className="text-4xl">Contact us</h2>
+        </div>
+        <div>
+          <form>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-2 my-2 rounded-md bg-slate-200"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-2 my-2 rounded-md bg-slate-200"
+            />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              className="w-full p-2 my-2 rounded-md bg-slate-200"
+            ></textarea>
+            <input
+              type="submit"
+              value="Send Message"
+              className="w-full p-2 my-2 rounded-md bg-green-500 text-white"
+            />
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
