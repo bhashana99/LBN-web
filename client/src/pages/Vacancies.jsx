@@ -46,18 +46,18 @@ export default function Vacancies() {
               {showVacancy.map((vacancy) => (
                 <div
                   key={vacancy._id}
-                  className="flex flex-col md:flex-row  gap-5 border-solid border-2 border-slate-200 mb-4 shadow-2xl md:shadow-lg hover:shadow-2xl mx-5 md:mx-0 bg-white"
+                  className="flex flex-col md:flex-row  gap-2 md:gap-5 border-solid border-2 border-slate-200 mb-4 shadow-2xl md:shadow-lg hover:shadow-2xl mx-5 md:mx-0 bg-white"
                 >
                   <div className="basis-1/4">
                     <img
                       src={vacancy.countryFlag}
                       alt="country flag"
-                      className="h-40 text-center md:text-start w-full object-cover"
+                      className="h-32 md:h-40  text-center md:text-start w-full object-cover"
                     />
                   </div>
                   <div className="flex flex-col gap-3 basis-2/4 ml-3 md:ml-0">
                     <div className="">
-                      <h3 className="font-semibold mt-2 text-2xl">
+                      <h3 className="font-semibold mt-2 text-lg md:text-2xl">
                         {vacancy.title}
                       </h3>
                     </div>
