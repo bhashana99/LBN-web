@@ -89,10 +89,10 @@ export default function Home() {
               in recruiting and supplying personnel for all categories of
               foreign employment.
             </p>
-            <div className="flex flex-wrap">
-              <p className="mt-5 text-xl ">You can find jobs in </p>
+            <div className="flex flex-wrap mt-5">
+              <p className=" text-xl ">You can find jobs in </p>
               <ReactTyped
-                className="mt-5 text-xl pl-2 font-bold text-black "
+                className=" text-xl pl-2 font-bold text-black "
                 strings={[
                   "Japan",
                   "Dubai",
@@ -105,7 +105,7 @@ export default function Home() {
                 backSpeed={140}
                 loop
               />
-              <p className="mt-0 md:mt-5 text-xl pl-0 md:pl-2 ">through us.</p>
+              <p className=" text-xl pl-0 md:pl-2 ">through us.</p>
             </div>
             <Link to="/about">
               <p className="text-blue-400 underline mt-3">
