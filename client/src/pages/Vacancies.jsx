@@ -73,7 +73,7 @@ export default function Vacancies() {
 
                   <div className="basis-1/4 flex items-center justify-center text-center mb-5 md:mb-0 bg-green-700 md:bg-transparent mx-5 md:mx-0 ">
                     <Link to={`/vacancy/${vacancy._id}`}>
-                      <button className="bg-green-700 rounded-lg p-4 my-auto text-white">
+                      <button className="bg-green-700 rounded-lg p-2 md:p-4 my-auto text-white">
                         View More
                       </button>
                     </Link>
