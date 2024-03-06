@@ -52,9 +52,9 @@ export default function Vacancy() {
         </p>
       )}
       {vacancy && !error && !loading && (
-        <div className="max-w-6xl mx-auto w-full  poppins mt-0 md:my-10 ">
-          <div className="justify-center text-green-700 my-5">
-            <h1 className="text-center font-bold text-xl md:text-4xl md:my-5  ">
+        <div className="max-w-6xl mx-auto w-full  poppins mt-0 md:my-0 ">
+          <div className="justify-center text-green-700 my-0">
+            <h1 className="text-center font-bold text-xl md:text-4xl md:my-0 py-2 md:py-10  ">
               {vacancy.title}
             </h1>
           </div>
@@ -118,7 +118,7 @@ export default function Vacancy() {
                 )}
               </div>
             </div>
-            <div className="flex flex-row gap-5 mb-5 items-center">
+            <div className="flex flex-row gap-5 mb-5 items-center ">
               <IoFastFoodOutline className="text-xl md:text-3xl text-green-500" />
               <div className="flex flex-col">
                 <h4 className="text-lg md:text-xl font-semibold">Food</h4>
@@ -154,9 +154,9 @@ export default function Vacancy() {
               </div>
             </div>
           </div>
-          <div className="text-center mb-10 mx-10 md:mx-0  ">
+          <div className="text-center  mx-10 md:mx-0  ">
             <Link to={vacancy.googleFormLink}>
-              <button className="w-full py-3 md:py-5 text-center font-bold text-white bg-green-600 hover:bg-green-700 rounded-md">
+              <button className="w-full py-3 md:py-5 text-center font-bold text-white bg-green-600 hover:bg-green-700 rounded-md mb-10">
                 Apply
               </button>
             </Link>
