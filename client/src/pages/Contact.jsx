@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import FadeIn from "../components/FadeIn";
 import contactImg from "../assets/images/contactImg.png";
 import { Link } from "react-router-dom";
+
 import {
   FaHome,
   FaFax,
@@ -13,6 +14,10 @@ import {
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { CiClock2 } from "react-icons/ci";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
+
 export default function Contact() {
   const form = useRef();
 
@@ -20,18 +25,25 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm("service_w0xj5m5", "template_z837jky", form.current, {
+        publicKey: "pAnIdlaUwsHgB7GKg",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          // console.log("SUCCESS!");
+          Swal.fire({
+            title: 'Thank You!',
+            text: 'Thanks for contacting us. We will get back to you soon.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
+          form.current.reset();
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
-    };
+  };
   return (
     <div className="max-w-6xl mx-auto w-full  poppins mt-5 md:mt-10 ">
       <FadeIn delay={0.2} direction="middle" padding fullWidth>
@@ -202,26 +214,27 @@ export default function Contact() {
 
       {/* contact form */}
       <div className="flex flex-col max-w-3xl mx-5 md:mx-auto ">
-        <div >
+        <div>
           <h2 className="text-4xl">Contact us</h2>
         </div>
         <div>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               placeholder="Your Name"
+              name="user_name"
               className="w-full p-2 my-2 rounded-md bg-slate-200"
             />
             <input
               type="email"
+              name="user_email"
               placeholder="Your Email"
               className="w-full p-2 my-2 rounded-md bg-slate-200"
             />
             <textarea
-              name=""
-              id=""
               cols="30"
               rows="10"
+              name="message"
               placeholder="Your Message"
               className="w-full p-2 my-2 rounded-md bg-slate-200"
             ></textarea>
