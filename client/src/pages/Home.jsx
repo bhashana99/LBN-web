@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </FadeIn>
 
-      <div className="mt-5 md:mt-10 max-w-7xl mx-5 md:mx-auto">
+      <div className="mt-8 md:mt-10 max-w-7xl mx-5 md:mx-auto">
         <div>
           <h2 className="uppercase text-blue-500 text-xl md:text-3xl  font-mono">
             Latest vacancies
