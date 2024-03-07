@@ -110,7 +110,7 @@ export default function Footer() {
       <hr className="h-1 bg-red-400  " />
       <div className="flex flex-col md:flex-row justify-between mx-5 py-2 ">
         <p className="font-sans">
-          Copyright <span>&#169;</span> 2024 - LBN KEY RESOURCE (PVT) LTD - All
+          Copyright <span>&#169;</span> 2024 - <Link to="/sign-in" >LBN KEY RESOURCE (PVT) LTD</Link> - All
           Rights Reserved
         </p>
         <p className="font-sans">
