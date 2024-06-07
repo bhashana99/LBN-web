@@ -115,7 +115,7 @@ export default function Footer() {
         </p>
         <p className="font-sans">
           Designed & Developed by{" "}
-          <Link to="https://www.linkedin.com/in/bhashana-chamodya/">
+          <Link to="https://www.linkedin.com/in/bhashana-chamodya/" target="_blank">
             <span className="underline text-green-600">bhashana99</span>
           </Link>
         </p>
