@@ -22,6 +22,7 @@ export default function Header() {
   const handleClick = () => {
     setShowMenu(!showMenu);
   };
+  
   return (
     <header className=" bg-red-300 relative shadow-2xl left-0 right-0 top-0 z-20 ">
       <div className="flex justify-between items-center max-w-7xl mx-auto p-4">

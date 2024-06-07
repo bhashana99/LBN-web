@@ -150,7 +150,7 @@ export default function Home() {
                       </h3>
                     </div>
                     <div className="md:ml-3">
-                      <p>{vacancy.description}</p>
+                      <p className="line-clamp-3">{vacancy.description}</p>
                     </div>
                     <div className="mt-1 md:mt-2 md:ml-3">
                       <p className="text-green-800 font-bold">
