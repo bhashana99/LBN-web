@@ -236,7 +236,7 @@ export default function CreateListing() {
             type="text"
             placeholder="Remarks"
             className="border p-3 rounded-lg"
-            id="requiredRemarks"
+            id="remarks"
             onChange={handleChange}
             value={formData.remarks}
           />
