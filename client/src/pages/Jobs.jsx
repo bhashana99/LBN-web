@@ -29,6 +29,180 @@ export default function Jobs() {
     setSelectedJob((prevJob) => (prevJob === jobId ? null : jobId));
   };
 
+  const completedProjectsData = [
+    {
+      country: `Japan`,
+      company: [
+        `Global Plan Association
+1-5-6, Fukuoka, Japan`,`Asset One Partners
+14-1-15, Hokkaido, Japan`,`Nihon Jinzai Society
+Hiroshaki, Japan`
+      ],
+      jobs: [
+        {
+          title: `Packing Worke`,
+          noEmployee: `700`,
+        },
+        {
+          title: `Auto Painter`,
+          noEmployee: `50`,
+        },
+        {
+          title: `Software Technician`,
+          noEmployee: `50`,
+        },
+        {
+          title: `Agriculture Worker`,
+          noEmployee: `50`,
+        },
+      ],
+    },
+    {
+      country: `Poland`,
+      company: [
+        `Gama Holdings
+05510, Warsaw, Poland
+`
+      ],
+      jobs: [
+        {
+          title: `Line Workers`,
+          noEmployee: `180`,
+        }
+      ],
+    },
+    {
+      country: `Lithuaniya`,
+      company: [
+        `UAB Visatex-VisaginasLithuaniya.`
+      ],
+      jobs: [
+        {
+          title: `Supervisor`,
+          noEmployee: `25`,
+        },
+        {
+          title: `Needleman`,
+          noEmployee: `250`,
+        },
+        {
+          title: `Ironman`,
+          noEmployee: `40`,
+        },
+        {
+          title: `Technician (Machinery)`,
+          noEmployee: `18`,
+        },
+      ],
+    },
+    {
+      country: `U.A.E`,
+      company: [
+        `Bin Hindi Security Service,P.O.Box.443, Ajman, UAE`
+      ],
+      jobs: [
+        {
+          title: `Security Officer`,
+          noEmployee: `50`,
+        },
+        {
+          title: `Security Guards`,
+          noEmployee: `300`,
+        },
+        {
+          title: `Light Vehicle Driver`,
+          noEmployee: `50`,
+        },
+      ],
+    },
+    {
+      country: `Doha Qatar`,
+      company: [
+        `United Construction, Est.P.O.Box.1851, Doha Qatar.`,
+        `KGL Transport Co. WLL, P.O.Box.3312, Doha, Qatar.`,
+        `Ireland Contracting &Services Trade, Co.P.O.Box.45327, Doha,Qatar`,
+        `Al Farabi Trade & Construction Co. ,P.O.Box.55683, Doha,Qatar.`,
+        `Garvys House (Restaurant & Pub) ,P.O.Box.45327, Doha, Qatar.`,
+        `Spring for Maintenance & Services, Co.P.O.Box.9898, Doha, Qatar.`,
+      ],
+      jobs: [
+        {
+          title: `Accountant`,
+          noEmployee: `03`,
+        },
+        {
+          title: `Engineer`,
+          noEmployee: `10`,
+        },
+        {
+          title: `Quantity Surveyor`,
+          noEmployee: `08`,
+        },
+        {
+          title: `Mason`,
+          noEmployee: `595`,
+        },
+        {
+          title: `Carpenter`,
+          noEmployee: `310`,
+        },
+        {
+          title: `Steel Fixer`,
+          noEmployee: `300`,
+        },
+        {
+          title: `Plumber`,
+          noEmployee: `95`,
+        },
+        {
+          title: `Electrician`,
+          noEmployee: `162`,
+        },
+        {
+          title: `Welder`,
+          noEmployee: `36`,
+        },
+        {
+          title: `Construction Helper`,
+          noEmployee: `340`,
+        },
+        {
+          title: `Transport Manager`,
+          noEmployee: `30`,
+        },
+        {
+          title: `Heavy Equipment Operator`,
+          noEmployee: `230`,
+        },
+
+        {
+          title: `Heavy Vehicle Driver`,
+          noEmployee: `26`,
+        },
+        {
+          title: `Office Boy`,
+          noEmployee: `125`,
+        },
+        {
+          title: `Manager Inventory`,
+          noEmployee: `30`,
+        },
+        {
+          title: `AC Technician`,
+          noEmployee: `30`,
+        },
+        {
+          title: `Safety Manager`,
+          noEmployee: `230`,
+        },
+        {
+          title: `Store Keeper`,
+          noEmployee: `230`,
+        },
+      ],
+    },
+  ];
+
   const pipelineTableData = [
     {
       country: `South Korea`,
@@ -264,7 +438,10 @@ Manager`,
                 <p>JAPAN</p>
               </li>
               <li className="flex  flex-row items-center gap-4 ">
-                <Flag code={LITHUANIA} style={{ width: "50px", height: "auto" }} />
+                <Flag
+                  code={LITHUANIA}
+                  style={{ width: "50px", height: "auto" }}
+                />
                 <p>LITHUANIA</p>
               </li>
               <li className="flex flex-row items-center gap-4">
@@ -345,13 +522,62 @@ Manager`,
             )}
           </div>
         ))}
+        {/* completed projects */}
+        <div>
+          <div>
+            <h1 className="text-center text-xl md:text-4xl font-semibold mt-10 mb-5">
+              Completed Projects
+            </h1>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="mx-auto border-collapse border-2 border-gray-500 table-auto ">
+              <thead>
+                <tr>
+                  <th className="border border-gray-500 p-3">Country</th>
+                  <th className="border border-gray-500 p-3">
+                    Client References
+                  </th>
+                  <th className="border border-gray-500 p-3">
+                    Job Title & No.Employee
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {completedProjectsData.map((data, index) => (
+                  <tr key={index}>
+                    <td className="border border-gray-500 p-3">
+                      {data.country}
+                    </td>
+                    <td className="border border-gray-500 p-3 whitespace-nowrap overflow-hidden overflow-ellipsis">
+                      {data.company.map((company, idx) => (
+                        <ul key={idx} className="list-disc ml-5">
+                          <li>{company}</li>
+                        </ul>
+                      ))}
+                    </td>
+                    <td className="border border-gray-500 p-3 whitespace-nowrap overflow-hidden overflow-ellipsis">
+                      {data.jobs.map((job, idx) => (
+                        <div key={idx}>
+                          <p>
+                            {job.title} : {job.noEmployee}{" "}
+                          </p>
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         {/* pipeline */}
         <div>
           <div>
             <h1 className="text-center text-xl md:text-4xl  font-semibold mt-10 mb-5">
               PROJECTS IN PIPELINE <br />{" "}
               <span className="text-red-700 text-sm ">
-                (FOR THE YEAR 2023 / 2024)
+                (FOR THE YEAR 2024 / 2025)
               </span>
             </h1>
           </div>
