@@ -16,6 +16,9 @@ export default function CreateListing() {
     country: "",
     description: "",
     address: "",
+    requiredQualifications: "",
+    requiredExperience: "",
+    remarks: "",
     contractPeriod: "",
     salary: "",
     food: false,
@@ -242,8 +245,35 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.salary}
           />
+           <textarea
+          rows={2}
+            type="text"
+            placeholder="Required Qualifications"
+            className="border p-3 rounded-lg"
+            id="requiredQualifications"
+            onChange={handleChange}
+            value={formData.requiredQualifications}
+          />
+           <textarea
+          rows={2}
+            type="text"
+            placeholder="Required Experience"
+            className="border p-3 rounded-lg"
+            id="requiredExperience"
+            onChange={handleChange}
+            value={formData.requiredExperience}
+          />
         </div>
         <div className="flex flex-col flex-1 gap-4 mt-3">
+        <textarea
+          rows={4}
+            type="text"
+            placeholder="Remarks"
+            className="border p-3 rounded-lg"
+            id="requiredRemarks"
+            onChange={handleChange}
+            value={formData.requiredRemarks}
+          />
           <div className="flex gap-6 flex-wrap">
             <div className="flex gap-2">
               <input

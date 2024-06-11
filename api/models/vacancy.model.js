@@ -16,7 +16,7 @@ const vacancySchema = new mongoose.Schema(
         },
         address:{
             type:String,
-            required:true,
+          
         },
         country:{
             type:String,
@@ -25,6 +25,17 @@ const vacancySchema = new mongoose.Schema(
         countryFlag:{
             type:String,
             required:true,
+        },
+        requiredQualifications:{
+            type:String,
+            
+        },
+        requiredExperience:{
+            type:String,
+            
+        },
+        remarks:{
+
         },
         food:{
             type:Boolean,
