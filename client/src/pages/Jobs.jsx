@@ -21,6 +21,7 @@ export default function Jobs() {
   const POLAND = "PL";
   const MALDIVES = "MV";
   const SouthKorea = "KR";
+  const LITHUANIA = "LT";
 
   const [selectedJob, setSelectedJob] = useState("null");
 
@@ -260,7 +261,11 @@ Manager`,
             <ul className="flex flex-col gap-5  md:flex-row  md:justify-between">
               <li className="flex  flex-row items-center gap-4 ">
                 <Flag code={JAPAN} style={{ width: "50px", height: "auto" }} />
-                <p>Japan</p>
+                <p>JAPAN</p>
+              </li>
+              <li className="flex  flex-row items-center gap-4 ">
+                <Flag code={LITHUANIA} style={{ width: "50px", height: "auto" }} />
+                <p>LITHUANIA</p>
               </li>
               <li className="flex flex-row items-center gap-4">
                 <Flag
