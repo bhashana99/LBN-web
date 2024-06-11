@@ -129,7 +129,7 @@ export default function Home() {
           </Link>
         </div>
         <div>
-          {showVacancy && showVacancy.length > 0 && (
+          { showVacancy.length > 0 ? (
             <div className="flex flex-col md:flex-row gap-5 mx-5 mt-5">
               {showVacancy.slice(0, 3).map((vacancy) => (
                 <div
@@ -169,7 +169,13 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          )}
+          ):
+          (
+            <div className="flex justify-center items-center h-40">
+              <p className="text-red-700">No vacancies available</p>
+            </div>
+          )
+          }
         </div>
       </div>
     </div>

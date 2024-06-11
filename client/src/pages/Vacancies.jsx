@@ -48,7 +48,7 @@ export default function Vacancies() {
           </h1>
         </div>
         <div>
-          {showVacancy && showVacancy.length > 0 && (
+          { showVacancy.length > 0 ? (
             <div className="">
               {showVacancy.map((vacancy) => (
                 <div
@@ -88,7 +88,11 @@ export default function Vacancies() {
                 </div>
               ))}
             </div>
-          )}
+          ):
+          <div className="flex justify-center items-center h-40">
+          <p className="text-red-700">No vacancies available</p>
+        </div>
+          }
         </div>
       </div>
       )}
