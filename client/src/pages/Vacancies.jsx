@@ -33,7 +33,7 @@ export default function Vacancies() {
   });
 
   return (
-    <div className="bg-rose-50">
+    <div className="bg-rose-50 pt-20">
       <div className=" max-w-4xl  mx-auto w-full py-10 ">
         <div>
           <h1 className="text-xl md:text-3xl ml-5 md:ml-0 font-bold text-rose-700 underline mb-5">
@@ -62,7 +62,7 @@ export default function Vacancies() {
                       </h3>
                     </div>
                     <div>
-                      <p>{vacancy.description}</p>
+                      <p className="line-clamp-3">{vacancy.description}</p>
                     </div>
                     <div className="mt-2">
                       <p className="text-green-800 font-bold">

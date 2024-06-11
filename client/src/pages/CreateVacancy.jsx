@@ -147,7 +147,7 @@ export default function CreateListing() {
   }
 
   return (
-    <main className="p-3 max-w-4xl mx-auto">
+    <main className="p-3 max-w-4xl mx-auto pt-20">
       <h1 className="text-3xl font-semibold text-center my-7">
         Create a Vacancy
       </h1>

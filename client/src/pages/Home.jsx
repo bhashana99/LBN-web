@@ -47,7 +47,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-w-full bg-rose-50">
+    <div className="min-w-full bg-rose-50 pt-20">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}

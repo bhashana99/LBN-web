@@ -44,7 +44,7 @@ export default function Contact() {
       );
   };
   return (
-    <div className="bg-rose-50">
+    <div className="bg-rose-50 pt-20">
       <div className="max-w-6xl mx-auto w-full  poppins py-5 md:py-10 ">
         <FadeIn delay={0.2} direction="middle" padding fullWidth>
           <h1 className="text-center font-bold text-xl md:text-4xl my-5  text-red-600">
