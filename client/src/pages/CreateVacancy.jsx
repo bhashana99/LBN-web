@@ -188,7 +188,7 @@ export default function CreateListing() {
             placeholder="Company Address"
             className="border p-3 rounded-lg"
             id="address"
-            required
+            
             onChange={handleChange}
             value={formData.address}
           />
@@ -238,7 +238,7 @@ export default function CreateListing() {
             className="border p-3 rounded-lg"
             id="requiredRemarks"
             onChange={handleChange}
-            value={formData.requiredRemarks}
+            value={formData.remarks}
           />
           <div className="flex gap-6 flex-wrap">
             <div className="flex gap-2">

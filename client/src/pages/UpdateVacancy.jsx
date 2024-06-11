@@ -215,7 +215,7 @@ export default function CreateListing() {
             placeholder="Company Address"
             className="border p-3 rounded-lg mb-3"
             id="address"
-            required
+   
             onChange={handleChange}
             value={formData.address}
           />
@@ -245,6 +245,10 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.salary}
           />
+           <label htmlFor="requiredQualifications" className="font-semibold ">
+            {" "}
+            Required Qualifications
+          </label>
            <textarea
           rows={2}
             type="text"
@@ -254,6 +258,10 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.requiredQualifications}
           />
+           <label htmlFor="requiredExperience" className="font-semibold ">
+            {" "}
+            Required Experience
+          </label>
            <textarea
           rows={2}
             type="text"
@@ -265,14 +273,18 @@ export default function CreateListing() {
           />
         </div>
         <div className="flex flex-col flex-1 gap-4 mt-3">
+        <label htmlFor="remarks" className="font-semibold ">
+            {" "}
+            Remarks
+          </label>
         <textarea
           rows={4}
             type="text"
             placeholder="Remarks"
             className="border p-3 rounded-lg"
-            id="requiredRemarks"
+            id="remarks"
             onChange={handleChange}
-            value={formData.requiredRemarks}
+            value={formData.remarks}
           />
           <div className="flex gap-6 flex-wrap">
             <div className="flex gap-2">
