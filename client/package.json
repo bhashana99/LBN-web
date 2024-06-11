@@ -25,6 +25,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.3.0",
+    "react-spinners": "^0.13.8",
     "react-typed": "^2.0.12",
     "react-world-flags": "^1.6.0",
     "redux-persist": "^6.0.0",

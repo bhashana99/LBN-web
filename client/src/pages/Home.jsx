@@ -134,7 +134,7 @@ export default function Home() {
               {showVacancy.slice(0, 3).map((vacancy) => (
                 <div
                   key={vacancy._id}
-                  className="flex flex-col gap-5 border-solid border-2 border-slate-200 bg-white mb-4 shadow-2xl md:shadow-lg hover:shadow-2xl w-full md:w-96 hover:scale-95"
+                  className="flex flex-col gap-5 border-solid border-2 border-slate-200 bg-white mb-4 shadow-2xl md:shadow-lg  w-full md:w-96 "
                 >
                   <div className="basis-1/4">
                     <img

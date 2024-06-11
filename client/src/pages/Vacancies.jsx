@@ -3,9 +3,12 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
+
 
 export default function Vacancies() {
   const [showVacancyError, setShowVacancyError] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [showVacancy, setShowVacancy] = useState([]);
   useEffect(() => {
     const fetchVacancies = async () => {
@@ -23,6 +26,7 @@ export default function Vacancies() {
         );
 
         setShowVacancy(sortedData);
+        setLoading(false);
       } catch (error) {
         setShowVacancyError(true);
         console.log(showVacancyError);
@@ -33,7 +37,10 @@ export default function Vacancies() {
   });
 
   return (
-    <div className="bg-rose-50 pt-20">
+    <div className="bg-rose-50 pt-20 min-h-screen flex flex-col items-center justify-center">
+      {loading ? (
+        <PropagateLoader color="#B81818FB" />
+      ) : (
       <div className=" max-w-4xl  mx-auto w-full py-10 ">
         <div>
           <h1 className="text-xl md:text-3xl ml-5 md:ml-0 font-bold text-rose-700 underline mb-5">
@@ -84,6 +91,7 @@ export default function Vacancies() {
           )}
         </div>
       </div>
+      )}
     </div>
   );
 }
