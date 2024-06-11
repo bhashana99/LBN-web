@@ -24,7 +24,7 @@ export default function Header() {
   };
   
   return (
-    <header className=" bg-red-300 relative shadow-2xl left-0 right-0 top-0 z-20 ">
+    <header className="fixed bg-red-300  shadow-2xl left-0 right-0 top-0 z-20 ">
       <div className="flex justify-between items-center max-w-7xl mx-auto p-4">
         <Link to="/" className="z-20">
           <div className="  flex items-center gap-3">
@@ -52,7 +52,7 @@ export default function Header() {
             to="/"
             className={`sm:inline ${
               isHomePage
-                ? "text-slate-600 text-2xl font-semibold "
+                ? "text-slate-600 text-xl underline "
                 : "text-slate-900 text-lg"
             }  hover:underline`}
           >
@@ -62,7 +62,7 @@ export default function Header() {
             to="/jobs"
             className={`sm:inline ${
               isJobsPage
-                ? "text-slate-600 text-2xl font-semibold"
+                ? "text-slate-600 text-xl underline"
                 : "text-slate-900 text-lg"
             }  hover:underline`}
           >
@@ -72,7 +72,7 @@ export default function Header() {
             to="/vacancies"
             className={`sm:inline ${
               isVacanciesPage
-                ? "text-slate-600 text-2xl font-semibold"
+                ? "text-slate-600 text-xl underline"
                 : "text-slate-900 text-lg"
             }  hover:underline`}
           >
@@ -82,7 +82,7 @@ export default function Header() {
             to="/about"
             className={`sm:inline ${
               isAboutPage
-                ? "text-slate-600 text-2xl font-semibold"
+                ? "text-slate-600 text-xl underline"
                 : "text-slate-900 text-lg"
             }  hover:underline`}
           >
@@ -92,7 +92,7 @@ export default function Header() {
             to="/contact"
             className={`sm:inline ${
               isContactPage
-                ? "text-slate-600 text-2xl font-semibold"
+                ? "text-slate-600 text-xl underline"
                 : "text-slate-900 text-lg"
             }  hover:underline`}
           >
