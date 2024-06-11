@@ -67,6 +67,27 @@ export default function Vacancy() {
                 <div className="mb-5 ">
                   <h3 className="font-bold ">{vacancy.description}</h3>
                 </div>
+                {vacancy.requiredQualifications && (
+                  <div className="mb-5">
+                    <p className="text-red-600 font-semibold">
+                      Required Qualifications : {"  "}
+                      <span className="text-black">
+                        {vacancy.requiredQualifications}
+                      </span>
+                    </p>
+                  </div>
+                )}
+                {vacancy.requiredExperience && (
+                  <div className="mb-5">
+                    <p className="text-red-600 font-semibold">
+                      Required Experience : {"  "}
+                      <span className="text-black">
+                        {vacancy.requiredExperience}
+                      </span>
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex flex-row gap-5 mb-5 items-center">
                   <TbWorldPin className="text-xl md:text-3xl  text-green-500" />
                   <div className="flex flex-col">
@@ -76,15 +97,19 @@ export default function Vacancy() {
                     <p>{vacancy.country}</p>
                   </div>
                 </div>
-                <div className="flex flex-row gap-5 mb-5 items-center">
-                  <MdOutlineLocationCity className="text-xl md:text-3xl text-green-500" />
-                  <div className="flex flex-col">
-                    <h4 className="text-lg md:text-xl font-semibold">
-                      Company Address
-                    </h4>
-                    <p>{vacancy.address}</p>
+                {vacancy.address && (
+                  <div className="flex flex-row gap-5 mb-5 items-center">
+                    <MdOutlineLocationCity className="text-xl md:text-3xl text-green-500" />
+                    <div className="flex flex-col">
+                      <h4 className="text-lg md:text-xl font-semibold">
+                        Company Address
+                      </h4>
+
+                      <p>{vacancy.address}</p>
+                    </div>
                   </div>
-                </div>
+                )}
+
                 <div className="flex flex-row gap-5 mb-5 items-center">
                   <FaFile className="text-xl md:text-3xl text-green-500" />
                   <div className="flex flex-col">
@@ -103,6 +128,18 @@ export default function Vacancy() {
                     <p>{vacancy.salary}</p>
                   </div>
                 </div>
+                {
+                  vacancy.remarks && (
+                    <div className="mb-5">
+                      <p >
+                        Remarks : {"  "}
+                        <span className="text-black">
+                          {vacancy.remarks}
+                        </span>
+                      </p>
+                    </div>
+                  )
+                }
               </div>
             </div>
           </div>

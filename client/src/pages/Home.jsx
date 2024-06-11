@@ -128,7 +128,7 @@ export default function Home() {
             <p className="font-light hover:underline"> show more vacancies</p>
           </Link>
         </div>
-        <div>
+        <div className="flex justify-center ">
           { showVacancy.length > 0 ? (
             <div className="flex flex-col md:flex-row gap-5 mx-5 mt-5">
               {showVacancy.slice(0, 3).map((vacancy) => (
