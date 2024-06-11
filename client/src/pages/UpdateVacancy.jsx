@@ -7,7 +7,7 @@ import {
 } from "firebase/storage";
 import { app } from "../firebase.js";
 import { useSelector } from "react-redux";
-import { useNavigate,useParams } from "react-router-dom";
+import { useNavigate, useParams,Link } from "react-router-dom";
 
 export default function CreateListing() {
   const [formData, setFormData] = useState({
@@ -25,12 +25,12 @@ export default function CreateListing() {
     googleFormLink: "",
   });
 
-  const {currentAdmin} = useSelector((state) => state.admin)
+  const { currentAdmin } = useSelector((state) => state.admin);
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [imageUploadError, setImageUploadError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error,setError] = useState(false);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const params = useParams();
 
@@ -41,12 +41,12 @@ export default function CreateListing() {
       const res = await fetch(`/api/vacancy/get-vacancy/${vacancyId}`);
       const data = await res.json();
 
-      if(data.success === false){
+      if (data.success === false) {
         setError(data.message);
         return;
       }
       setFormData(data);
-    }
+    };
 
     fetchVacancy();
   }, [params.id]);
@@ -129,7 +129,7 @@ export default function CreateListing() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if(formData.countryFlag === "") {
+      if (formData.countryFlag === "") {
         setImageUploadError("Please upload a country flag");
         return;
       }
@@ -137,9 +137,9 @@ export default function CreateListing() {
       setLoading(true);
       setError(false);
       const res = await fetch(`/api/vacancy/update-vacancy/${params.id}`, {
-        method: 'POST',
-        headers:{
-          'Content-Type': 'application/json'
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
 
         body: JSON.stringify({
@@ -151,24 +151,26 @@ export default function CreateListing() {
       const data = await res.json();
       console.log("Server Response:", data);
       setLoading(false);
-      if(data.success === false){
+      if (data.success === false) {
         setError(data.message);
       }
-      navigate(`/vacancy/${data._id}`)
+      navigate(`/vacancy/${data._id}`);
     } catch (error) {
       setError(error.message);
       setLoading(false);
     }
-  }
+  };
 
   return (
     <main className="p-3 max-w-4xl mx-auto pt-20">
       <h1 className="text-3xl font-semibold text-center my-7">
         Update Vacancy
       </h1>
-      <form onSubmit={handleSubmit}  className="flex flex-col sm:flex-row gap-7">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-7">
         <div className="flex flex-col gap-1 flex-1">
-          <label htmlFor="title" className="font-semibold ">Job Title </label>
+          <label htmlFor="title" className="font-semibold ">
+            Job Title{" "}
+          </label>
           <input
             type="text"
             placeholder="Job Title"
@@ -178,7 +180,9 @@ export default function CreateListing() {
             value={formData.title}
             required
           />
-          <label htmlFor="country" className="font-semibold ">Country </label>
+          <label htmlFor="country" className="font-semibold ">
+            Country{" "}
+          </label>
           <input
             type="text"
             placeholder="Country"
@@ -188,7 +192,9 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.country}
           />
-          <label htmlFor="description" className="font-semibold ">Job Description </label>
+          <label htmlFor="description" className="font-semibold ">
+            Job Description{" "}
+          </label>
           <textarea
             type="text"
             placeholder="Description"
@@ -198,7 +204,9 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.description}
           />
-          <label htmlFor="address" className="font-semibold ">Company Address </label>
+          <label htmlFor="address" className="font-semibold ">
+            Company Address{" "}
+          </label>
           <input
             type="text"
             placeholder="Company Address"
@@ -208,7 +216,10 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.address}
           />
-          <label htmlFor="contractPeriod" className="font-semibold "> Contract Period</label>
+          <label htmlFor="contractPeriod" className="font-semibold ">
+            {" "}
+            Contract Period
+          </label>
           <input
             type="text"
             placeholder="Contract Period"
@@ -218,7 +229,10 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.contractPeriod}
           />
-          <label htmlFor="salary" className="font-semibold "> Salary Range</label>
+          <label htmlFor="salary" className="font-semibold ">
+            {" "}
+            Salary Range
+          </label>
           <input
             type="text"
             placeholder="Salary Range"
@@ -272,7 +286,10 @@ export default function CreateListing() {
               <span>Air Ticket</span>
             </div>
           </div>
-          <label htmlFor="googleFormLink" className="font-semibold "> Google Form Link</label>
+          <label htmlFor="googleFormLink" className="font-semibold ">
+            {" "}
+            Google Form Link
+          </label>
           <input
             type="text"
             placeholder="Google Form Link"
@@ -292,22 +309,24 @@ export default function CreateListing() {
               onChange={(e) => setFile(e.target.files)}
             />
             <button
-            disabled={uploading}
-            type="button"
-
+              disabled={uploading}
+              type="button"
               onClick={handleFlagUpload}
               className="p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
             >
               {uploading ? "Uploading..." : "Upload"}
             </button>
           </div>
-          
 
           <p className="text-red-700">{imageUploadError && imageUploadError}</p>
 
           {formData.countryFlag ? (
             <div className="flex justify-between p-3 border items-center">
-              <img src={formData.countryFlag} alt="country flag"  className="w-30 h-20 object-contain rounded-lg" />
+              <img
+                src={formData.countryFlag}
+                alt="country flag"
+                className="w-30 h-20 object-contain rounded-lg"
+              />
               <button
                 onClick={() => handleRemoveImage()}
                 type="button"
@@ -320,9 +339,18 @@ export default function CreateListing() {
             ""
           )}
 
-          <button disabled={loading || uploading} className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
-           {loading ? "Updating..." : "Update Vacancy"}
+          <button
+            disabled={loading || uploading}
+            className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+          >
+            {loading ? "Updating..." : "Update Vacancy"}
           </button>
+          <Link to="/profile"  className="p-3 bg-green-700 text-white text-center rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
+            <button disabled={loading || uploading}
+           
+       >Back</button>
+          </Link>
+
           {error && <p className="text-red-700">{error}</p>}
         </div>
       </form>

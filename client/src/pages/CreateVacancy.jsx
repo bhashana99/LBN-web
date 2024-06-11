@@ -7,7 +7,7 @@ import {
 } from "firebase/storage";
 import { app } from "../firebase.js";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function CreateListing() {
   const [formData, setFormData] = useState({
@@ -301,6 +301,9 @@ export default function CreateListing() {
           <button disabled={loading || uploading} className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
            {loading ? "Creating..." : "Create Vacancy"}
           </button>
+          <Link to='/profile' className="p-3 bg-green-700 text-white text-center rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
+          <button disabled={loading || uploading}>Back</button>
+          </Link>
           {error && <p className="text-red-700">{error}</p>}
         </div>
       </form>
