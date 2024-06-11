@@ -65,7 +65,7 @@ export default function Vacancy() {
             <div className="ml-3">
               <div>
                 <div className="mb-5 ">
-                  <h3 className="font-bold line-clamp-3">{vacancy.description}</h3>
+                  <h3 className="font-bold ">{vacancy.description}</h3>
                 </div>
                 <div className="flex flex-row gap-5 mb-5 items-center">
                   <TbWorldPin className="text-xl md:text-3xl  text-green-500" />
