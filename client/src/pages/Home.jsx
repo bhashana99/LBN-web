@@ -8,10 +8,10 @@ import "swiper/css/scrollbar";
 import welcome from "../assets/images/welcome.jpg";
 import FadeIn from "../components/FadeIn";
 import { Link } from "react-router-dom";
-import img1 from "../assets/images/cover/tim-mossholder-GOMhuCj-O9w-unsplash.jpg";
-import img2 from "../assets/images/cover/home-background.jpg";
-import img3 from "../assets/images/cover/home-background5.jpg";
-import img4 from "../assets/images/cover/sebastian-herrmann-NbtIDoFKGO8-unsplash.jpg";
+import img1 from "../assets/images/cover/Slide1.jpg";
+import img2 from "../assets/images/cover/Slide2.jpg";
+import img3 from "../assets/images/cover/Slide3.jpg";
+import img4 from "../assets/images/cover/Slide4.jpg";
 
 export default function Home() {
   SwiperCore.use([Navigation]);
@@ -47,7 +47,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-w-full bg-rose-50 pt-20">
+    <div className="min-w-full bg-rose-50 pt-20 ">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
@@ -62,15 +62,15 @@ export default function Home() {
       >
         {imageUrls.map((url, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="h-[400px] md:h-[700px] transition-transform transform origin-center"
-              style={{
-                backgroundImage: `url(${url})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
-          </SwiperSlide>
+          <div
+            className="h-[250px] md:h-[550px] lg:h-[900px] transition-transform transform origin-center "
+            style={{
+              backgroundImage: `url(${url})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+        </SwiperSlide>
         ))}
       </Swiper>
       <FadeIn delay={0.2} direction="middle" padding fullWidth>
