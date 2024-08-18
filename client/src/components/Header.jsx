@@ -122,7 +122,7 @@ export default function Header() {
         <div
           className={
             !showMenu
-              ? "fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900  bg-slate-200 ease-in-out duration-500 "
+              ? "fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900  bg-red-200 ease-in-out duration-500 "
               : "fixed left-[-100%] "
           }
         >
