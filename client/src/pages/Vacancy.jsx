@@ -192,7 +192,7 @@ export default function Vacancy() {
             </div>
           </div>
           <div className="text-center  mx-10 md:mx-0  ">
-            <Link to={vacancy.googleFormLink}>
+            <Link to={vacancy.googleFormLink} target="_blank">
               <button className="w-full py-3 md:py-5 text-center font-bold text-white bg-green-600 hover:bg-green-700 rounded-md mb-10">
                 Apply
               </button>
