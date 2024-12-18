@@ -410,7 +410,7 @@ export default function About() {
             <div>
               <FadeIn delay={0.2} direction="left" padding fullWidth>
                 <hr className="bg-white border-0 rounded h-1 my-2" />
-                <h4 className="text-center  my-4">Bank Details</h4>
+                <h4 className="text-center uppercase  my-4">Bank Details</h4>
               </FadeIn>
               <FadeIn delay={0.3} direction="left" padding fullWidth>
                 <div className="flex flex-row gap-4 items-center my-2">
