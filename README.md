@@ -57,5 +57,5 @@ npm start
 ---
 ## Author
 
-Developed by **Bhashana Chamodya**
+Developed by **Bhashana Chamodya**,
 LinkedIn: https://www.linkedin.com/in/bhashana-chamodya/
