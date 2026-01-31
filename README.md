@@ -55,9 +55,6 @@ npm install
 npm start
 ```
 ---
-
-## 2. Add Author / Contact (Very Small)
-
 ```md
 ## Author
 
