@@ -55,8 +55,7 @@ npm install
 npm start
 ```
 ---
-```md
 ## Author
 
-Developed by **Bhashana Chamodya**  
+Developed by **Bhashana Chamodya**
 LinkedIn: https://www.linkedin.com/in/bhashana-chamodya/
